@@ -2,3 +2,5 @@ _site/
 .jekyll-cache/
 .DS_Store
 unused
+monsterisland.bbprojectd
+monsterisland.code-workspace
