@@ -1,8 +1,9 @@
 _site/
 .jekyll-cache/
 .DS_Store
-unused
+unused/
 monsterisland.bbprojectd
 monsterisland.code-workspace
-scripts/*.py
+*.py
+*.txt
 

@@ -11,6 +11,14 @@ active_nav: Orders
 	<link rel="stylesheet" href="scripts/css/gruvbox-theme.css">
 
 	<style>
+		.orders-wrapper {
+			max-width: 900px;
+			width: 100%;
+			margin: 0 auto;
+			padding: 0 10px;
+			box-sizing: border-box;
+		}
+
 		.table-header {
 			display: grid;
 			grid-template-columns: 80px 2fr 3fr 80px;
@@ -22,7 +30,6 @@ active_nav: Orders
 			border-radius: 8px;
 			margin-bottom: 10px;
 			border: 1px solid var(--gray);
-			width: 900px;
 		}
 
 		.table-header > div {
@@ -44,7 +51,6 @@ active_nav: Orders
 			border-radius: 6px;
 			border: 1px solid var(--bg-hard);
 			transition: all 0.2s;
-			width:900px;
 		}
 
 		.order-row:hover {
@@ -113,6 +119,8 @@ active_nav: Orders
 <header>
 	<h1>Orders</h1>
 </header>
+
+<div class="orders-wrapper">
 
 <div class="search-container">
 	<input type="text" id="searchInput" class="search-input" placeholder="Search...">
@@ -703,6 +711,8 @@ active_nav: Orders
 		<div class="aps">any#</div>
 	</div>
 </div>
+
+</div><!-- end .orders-wrapper -->
 
 <script>
 	// Extract data from DOM and store references

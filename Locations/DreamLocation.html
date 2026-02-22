@@ -15,6 +15,7 @@
 	<style>
 		.spell-stats {
 			width: auto;
+			max-width: 100%;
 		}
 
 		.stats-col a {
@@ -26,7 +27,14 @@
 			text-decoration: underline;
 		}
 
-		.stats-header, .stats-row { grid-template-columns: 2fr 5fr 2fr 2fr 5fr; }
+		/* Wide layout: give Coordinates natural width, Description and Notes more space */
+		.stats-header, .stats-row { grid-template-columns: max-content 5fr 2fr 2fr 4fr; }
+
+		/* On narrow screens, unset this override so 5-column-display.css
+		   transposed layout (grid-row/grid-column placement) takes over */
+		@media (max-width: 650px) {
+			.stats-header, .stats-row { grid-template-columns: unset; }
+		}
 	</style>
 </head>
 

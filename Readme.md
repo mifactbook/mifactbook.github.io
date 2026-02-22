@@ -1,0 +1,3 @@
+This repository is an abridged, reskinned backup of [Ed Webb's Monster Island website](http://monster.edwebb.net/badnews.php). It is intended to function as a lightweight artifact for preservation purposes rather than a complete mirror. While much of the original site's extensive information is omitted here, this copy ensures that the most basic and necessary data remains available to the public.
+
+You can peruse the mirror at [https://mifactbook.github.io](https://mifactbook.github.io)
