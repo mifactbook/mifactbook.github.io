@@ -4,3 +4,5 @@ _site/
 unused
 monsterisland.bbprojectd
 monsterisland.code-workspace
+scripts/*.py
+
