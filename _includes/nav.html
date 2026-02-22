@@ -1,0 +1,17 @@
+<nav>
+	<ul>
+		<li{% if page.active_nav == "Home" %} class="active"{% endif %}>{% if page.active_nav == "Home" %}Home{% else %}<a href="{{ site.baseurl }}/index.html">Home</a>{% endif %}</li>
+		<li{% if page.active_nav == "Blurbs" %} class="active"{% endif %}>{% if page.active_nav == "Blurbs" %}Blurbs{% else %}<a href="{{ site.baseurl }}/Blurbs/AllBlurbs.html">Blurbs</a>{% endif %}</li>
+		<li{% if page.active_nav == "Creatures" %} class="active"{% endif %}>{% if page.active_nav == "Creatures" %}Creatures{% else %}<a href="{{ site.baseurl }}/Items/AllCreaturesByName.html">Creatures</a>{% endif %}</li>
+		<li{% if page.active_nav == "Gods" %} class="active"{% endif %}>{% if page.active_nav == "Gods" %}Gods &amp; Demigods{% else %}<a href="{{ site.baseurl }}/Items/Gods.html">Gods &amp; Demigods</a>{% endif %}</li>
+		<li{% if page.active_nav == "Items" %} class="active"{% endif %}>{% if page.active_nav == "Items" %}Items{% else %}<a href="{{ site.baseurl }}/Items/AllItemsByName.html">Items</a>{% endif %}</li>
+		<li{% if page.active_nav == "Items by Category" %} class="active"{% endif %}>{% if page.active_nav == "Items by Category" %}Items by Category{% else %}<a href="{{ site.baseurl }}/Items.html">Items by Category</a>{% endif %}</li>
+		<li{% if page.active_nav == "Locations" %} class="active"{% endif %}>{% if page.active_nav == "Locations" %}Locations{% else %}<a href="{{ site.baseurl }}/Locations.html">Locations</a>{% endif %}</li>
+		<li{% if page.active_nav == "Orders" %} class="active"{% endif %}>{% if page.active_nav == "Orders" %}Orders{% else %}<a href="{{ site.baseurl }}/Orders.html">Orders</a>{% endif %}</li>
+		<li{% if page.active_nav == "Phenotypes" %} class="active"{% endif %}>{% if page.active_nav == "Phenotypes" %}Phenotypes{% else %}<a href="{{ site.baseurl }}/Items/Phenotypes.html">Phenotypes</a>{% endif %}</li>
+		<li{% if page.active_nav == "Plants" %} class="active"{% endif %}>{% if page.active_nav == "Plants" %}Plants{% else %}<a href="{{ site.baseurl }}/Items/AllPlants.html">Plants</a>{% endif %}</li>
+		<li{% if page.active_nav == "Spells" %} class="active"{% endif %}>{% if page.active_nav == "Spells" %}Spells{% else %}<a href="{{ site.baseurl }}/Items/AllSpellsByName.html">Spells</a>{% endif %}</li>
+		<li{% if page.active_nav == "Terrains" %} class="active"{% endif %}>{% if page.active_nav == "Terrains" %}Terrains{% else %}<a href="{{ site.baseurl }}/Items/Terrains.html">Terrains</a>{% endif %}</li>
+		<li{% if page.active_nav == "Where" %} class="active"{% endif %}>{% if page.active_nav == "Where" %}Where's That Place?{% else %}<a href="{{ site.baseurl }}/MapWhere.html">Where's That Place?</a>{% endif %}</li>
+	</ul>
+</nav>

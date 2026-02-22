@@ -1,0 +1,105 @@
+---
+active_nav: Where
+---
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Where's that Place?</title>
+	<link rel="stylesheet" href="scripts/css/gruvbox-theme.css">
+
+	<style>
+		.locations-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+			gap: 15px;
+			margin-bottom: 20px;
+		}
+
+		.location-card {
+			padding: 20px;
+			background-color: var(--bg-soft);
+			border-radius: 8px;
+			border: 2px solid var(--bg-hard);
+			transition: all 0.3s;
+			text-align: center;
+		}
+
+		.location-card:hover {
+			background-color: var(--bg-hard);
+			border-color: var(--aqua);
+			transform: translateY(-3px);
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+		}
+
+		.location-card a {
+			color: var(--aqua);
+			text-decoration: none;
+			font-size: 1.3em;
+			font-weight: 600;
+			display: block;
+		}
+
+		.location-card:hover a {
+			color: var(--green);
+		}
+
+		@media (max-width: 768px) {
+			.locations-grid {
+				grid-template-columns: 1fr;
+			}
+
+			.location-card a {
+				font-size: 1.2em;
+			}
+		}
+	</style>
+</head>
+
+<body>
+
+{% include nav.html %}
+
+<header>
+	<h1>Where's that Place?</h1>
+</header>
+
+<div id="locationsContainer" class="locations-grid">
+	<div class="location-card">
+		<a href="Fort/FarExoticas.html">Far Exoticas</a>
+	</div>
+
+	<div class="location-card">
+		<a href="Fort/FarForges.html">Far Forges</a>
+	</div>
+
+	<div class="location-card">
+		<a href="Fort/FarInns.html">Far Inns</a>
+	</div>
+
+	<div class="location-card">
+		<a href="Fort/FarPosts.html">Far Posts</a>
+	</div>
+
+	<div class="location-card">
+		<a href="Fort/FarBanks.html">Jossman Imperial Banks</a>
+	</div>
+
+	<div class="location-card">
+		<a href="Fort/RailwayStations.html">Railway Stations</a>
+	</div>
+
+	<div class="location-card">
+		<a href="Fort/Towers.html">Towers</a>
+	</div>
+
+	<div class="location-card">
+		<a href="Fort/TrollShoppes.html">Troll Shoppes</a>
+	</div>
+</div>
+
+</body>
+</html>

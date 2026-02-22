@@ -1,0 +1,85 @@
+/* Overrides for Fort pages with 3-column layout (Coordinates / Name / Trading) */
+
+.fort-nav-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 10px;
+	margin-bottom: 20px;
+}
+
+.table-header,
+.location-row {
+	grid-template-columns: 150px 2fr 3fr;
+	max-width: 800px;
+}
+
+#spells-forsale {
+	display: flex;
+	flex-direction: column;
+	border: 1px solid var(--bg-hard);
+	border-radius: 6px;
+	overflow: hidden;
+}
+
+#spells-forsale > div {
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	padding: 6px 10px;
+	border-bottom: 1px solid var(--bg-hard);
+}
+
+#spells-forsale > div:first-child {
+	background-color: var(--bg-hard);
+	color: var(--yellow);
+	font-weight: 600;
+}
+
+#spells-forsale > div:last-child {
+	border-bottom: none;
+}
+
+#spells-forsale a {
+	color: var(--orange);
+	text-decoration: none;
+}
+
+#spells-forsale a:hover {
+	color: var(--green);
+	text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+	/* Reset the 3-col override so Fort.css stacking takes effect */
+	.table-header,
+	.location-row {
+		grid-template-columns: 1fr;
+		max-width: 100%;
+	}
+
+	/* Add a "Trading:" label above the sub-table */
+	.location-row > div:last-child::before {
+		content: "Trading:";
+		display: block;
+		font-weight: bold;
+		color: var(--yellow);
+		margin-bottom: 6px;
+	}
+}
+
+@media (max-width: 600px) {
+	.fort-nav-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	#spells-forsale > div {
+		grid-template-columns: 0.8fr 2fr 0.8fr;
+		padding: 5px 8px;
+		font-size: 0.9em;
+	}
+}
+
+@media (max-width: 400px) {
+	.fort-nav-grid {
+		grid-template-columns: 1fr;
+	}
+}

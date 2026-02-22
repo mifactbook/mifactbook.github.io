@@ -1,0 +1,50 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{ page.title }}</title>
+	<link rel="stylesheet" href="../scripts/css/gruvbox-theme.css">
+	<link rel="stylesheet" href="../scripts/css/info-section.css">
+	<link href="../scripts/css/availability-grid.css" rel="stylesheet"/>
+</head>
+
+<body>
+
+{% include nav.html %}
+
+<header>
+	<h1>{{ page.title }}</h1>
+</header>
+
+{% for txt in page.blurb %}
+	<div class="info-section">
+		{{ txt }}
+	</div>
+{% endfor %}
+
+{% if page.loc %}
+	<div class="available-section">
+		<h3>Available From</h3>
+
+		<div class="availability-list">
+			<div class="availability-header">
+				<div class="col-structure">Structure</div>
+				<div class="col-order">Order</div>
+				<div class="col-price">Price</div>
+			</div>
+
+		{% for loc in page.loc %}
+			<div class="availability-row">
+				<div class="col-structure"><a href="../Far/{{loc.url}}">{{loc.name}}</a></div>
+				<div class="col-order">{{loc.order}}</div>
+				<div class="col-price">{{loc.price}}</div>
+			</div>
+		{% endfor %}
+	</div>
+{% endif %}
+
+</body>
+</html>

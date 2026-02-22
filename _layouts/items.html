@@ -1,0 +1,108 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{ page.item_name }}</title>
+	<link rel="stylesheet" href="../scripts/css/gruvbox-theme.css">
+	<link href="../scripts/css/info-section.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="../scripts/css/2-column-display.css">
+</head>
+
+<body>
+
+{% include nav.html %}
+
+<header>
+	<h1>{{ page.item_name }} ({{ page.item_id }})</h1>
+</header>
+
+<div class="info-section">
+	{{content}}
+</div>
+
+{% if page.src %}
+	<div class="spell-stats">
+		<div class="stats-list">
+			<div class="stats-header">
+				<div class="stats-col">Source</div>
+			</div>
+
+			{% for s in page.src %}
+				<div class="stats-row">
+					<div class="stats-col">
+						{% if s.url %}<a href="{{ s.url }}">{{ s.name }}</a>{% else %}{{ s.name }}{% endif %}
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+{% endif %}
+
+{% if page.make %}
+	<div class="spell-stats">
+		<div class="stats-list">
+			<div class="stats-header">
+				<div class="stats-col">Ingredient For</div>
+			</div>
+
+			{% for m in page.make %}
+				<div class="stats-row">
+					<div class="stats-col">
+						{% if m.url %}<a href="{{ m.url }}">{{ m.name }}</a>{% else %}{{ m.name }}{% endif %}
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+{% endif %}
+
+{% if page.recipe %}
+	<div class="spell-stats">
+		<div class="stats-list">
+			<div class="stats-header">
+				<div class="stats-col">Recipe</div>
+			</div>
+
+			{% for r in page.recipe %}
+				<div class="stats-row">
+					<div class="stats-col">
+						{{ r.qty }} {% if r.url %}<a href="{{ r.url }}">{{ r.name }}</a>{% else %}{{ r.name}}{% endif %}
+					</div>
+				</div>
+			{% endfor %}
+
+			<div class="stats-row">
+				<div class="stats-col">
+					{{ page.ap }} Action Point(s)
+				</div>
+			</div>
+		</div>
+	</div>
+{% endif %}
+
+<!--
+<div class="available-section">
+	<h3>Available From</h3>
+
+	<div class="availability-list">
+		<div class="availability-header">
+			<div class="col-structure">Structure</div>
+			<div class="col-order">Order</div>
+			<div class="col-price">Price</div>
+		</div>
+
+		<div class="availability-row">
+			<div class="col-structure"><a href="../Far/Xubaar.html">Xubaar's</a></div>
+			<div class="col-order">TX 8</div>
+			<div class="col-price">987</div>
+		</div>
+
+	</div>
+</div>
+ -->
+
+</body>
+</html>

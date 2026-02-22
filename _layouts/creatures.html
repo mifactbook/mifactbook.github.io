@@ -1,0 +1,63 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{ page.title }}</title>
+	<link rel="stylesheet" href="../scripts/css/gruvbox-theme.css">
+	<link href="../scripts/css/info-section.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="../scripts/css/2-column-display.css">
+</head>
+
+<body>
+
+{% include nav.html %}
+
+<header>
+	<h1>{{ page.title }} ({{ page.mob_id }})</h1>
+</header>
+
+<div class="info-section">
+	{{content}}
+</div>
+
+{% if page.item %}
+	<div class="spell-stats">
+		<div class="stats-list">
+			<div class="stats-header">
+				<div class="stats-col">Item</div>
+			</div>
+
+			{% for item in page.item %}
+				<div class="stats-row">
+					<div class="stats-col">
+						<a href="{{ item.url }}">{{ item.name }}</a>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+{% endif %}
+
+{% if page.loc %}
+	<div class="spell-stats">
+		<div class="stats-list">
+			<div class="stats-header">
+				<div class="stats-col">Found In</div>
+			</div>
+
+			{% for loc in page.loc %}
+				<div class="stats-row">
+					<div class="stats-col">
+						{% if loc.url %}<a href="{{ loc.url }}">{{ loc.name }}</a>{% else %}{{ loc.name }}{% endif %}
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+{% endif %}
+
+</body>
+</html>
