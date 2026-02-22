@@ -1,0 +1,771 @@
+---
+active_nav: Orders
+---
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Orders</title>
+	<link rel="stylesheet" href="scripts/css/gruvbox-theme.css">
+
+	<style>
+		.table-header {
+			display: grid;
+			grid-template-columns: 80px 2fr 3fr 80px;
+			gap: 10px;
+			padding: 12px 15px;
+			background-color: var(--bg-hard);
+			font-weight: bold;
+			color: var(--yellow);
+			border-radius: 8px;
+			margin-bottom: 10px;
+			border: 1px solid var(--gray);
+			width: 900px;
+		}
+
+		.table-header > div {
+			cursor: pointer;
+			user-select: none;
+		}
+
+		.table-header > div:hover {
+			color: var(--aqua);
+		}
+
+		.order-row {
+			display: grid;
+			grid-template-columns: 80px 2fr 3fr 80px;
+			gap: 10px;
+			padding: 12px 15px;
+			background-color: var(--bg-soft);
+			margin-bottom: 8px;
+			border-radius: 6px;
+			border: 1px solid var(--bg-hard);
+			transition: all 0.2s;
+			width:900px;
+		}
+
+		.order-row:hover {
+			background-color: var(--bg-hard);
+			border-color: var(--gray);
+			transform: translateX(3px);
+		}
+
+		.order-row.section-header {
+			background-color: var(--bg1);
+			font-weight: bold;
+			color: var(--orange);
+			grid-template-columns: 1fr;
+			text-align: center;
+			margin-top: 20px;
+		}
+
+		.code {
+			color: var(--yellow);
+			font-weight: bold;
+			text-align: center;
+		}
+
+		.format {
+			color: var(--fg-dim);
+		}
+
+		.name {
+			color: var(--fg);
+			font-weight: 500;
+		}
+
+		.aps {
+			color: var(--blue);
+		}
+
+		@media (max-width: 768px) {
+			.table-header {
+				display: none;
+			}
+
+			.order-row {
+				grid-template-columns: 1fr;
+				gap: 5px;
+				padding: 10px;
+			}
+
+			.order-row > div:before {
+				font-weight: bold;
+				color: var(--yellow);
+				margin-right: 10px;
+			}
+
+			.code:before { content: "Code: "; }
+			.format:before { content: "Format: "; }
+			.name:before { content: "Name: "; }
+			.aps:before { content: "APs: "; }
+		}
+	</style>
+</head>
+
+<body>
+
+{% include nav.html %}
+
+<header>
+	<h1>Orders</h1>
+</header>
+
+<div class="search-container">
+	<input type="text" id="searchInput" class="search-input" placeholder="Search...">
+</div>
+
+<div class="table-header">
+	<div class="sortable" data-sort="code">Code</div>
+	<div>Format</div>
+	<div class="sortable" data-sort="name">Name</div>
+	<div>Cost</div>
+</div>
+
+<div id="ordersContainer">
+	<div class="order-row">
+		<div class="code">A</div>
+		<div class="format">Race/Monster/Creature</div>
+		<div class="name">Track: Attack</div>
+		<div class="aps">6/12/24</div>
+	</div>
+	<div class="order-row">
+		<div class="code">AC</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">Ancestral Ceremony</div>
+		<div class="aps">12</div>
+	</div>
+	<div class="order-row">
+		<div class="code">AP</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">Appraise</div>
+		<div class="aps">0</div>
+	</div>
+	<div class="order-row">
+		<div class="code">AS</div>
+		<div class="format">Item#</div>
+		<div class="name">Automatic Sell</div>
+		<div class="aps">0</div>
+	</div>
+	<div class="order-row">
+		<div class="code">B</div>
+		<div class="format">[Item#] [Qty]</div>
+		<div class="name">Buy From Far Post</div>
+		<div class="aps">varies</div>
+	</div>
+	<div class="order-row">
+		<div class="code">B</div>
+		<div class="format">[Item#] [Qty]</div>
+		<div class="name">Bring From Storeroom</div>
+		<div class="aps">0</div>
+	</div>
+	<div class="order-row">
+		<div class="code">B1</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">Race's Battle Cry</div>
+		<div class="aps">0</div>
+	</div>
+	<div class="order-row">
+		<div class="code">B5</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">Group's Battle Cry</div>
+		<div class="aps">0</div>
+	</div>
+	<div class="order-row">
+		<div class="code">B9</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">God's Battle Cry</div>
+		<div class="aps">0</div>
+	</div>
+	<div class="order-row">
+		<div class="code">BP</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">Bathe In Pond</div>
+		<div class="aps">2</div>
+	</div>
+	<div class="order-row">
+		<div class="code">C</div>
+		<div class="format">Spell# [Item# or Spell Points]</div>
+		<div class="name">Cast Spell</div>
+		<div class="aps">varies</div>
+	</div>
+	<div class="order-row">
+		<div class="code">CC</div>
+		<div class="format">Creature#</div>
+		<div class="name">Capture</div>
+		<div class="aps">0</div>
+	</div>
+	<div class="order-row">
+		<div class="code">CB</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">Collect Bounty</div>
+		<div class="aps">0</div>
+	</div>
+	<div class="order-row">
+		<div class="code">CS</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">Ceremony of Sanctification</div>
+		<div class="aps">8</div>
+	</div>
+	<div class="order-row">
+		<div class="code">D</div>
+		<div class="format">Hands Deep</div>
+		<div class="name">Dig</div>
+		<div class="aps">varies</div>
+	</div>
+	<div class="order-row">
+		<div class="code">DI</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">Diet</div>
+		<div class="aps">0</div>
+	</div>
+	<div class="order-row">
+		<div class="code">DO</div>
+		<div class="format">Oculars</div>
+		<div class="name">Deposit Oculars</div>
+		<div class="aps">20</div>
+	</div>
+	<div class="order-row">
+		<div class="code">E</div>
+		<div class="format">Item#</div>
+		<div class="name">Equip</div>
+		<div class="aps">0</div>
+	</div>
+	<div class="order-row">
+		<div class="code">EF</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">Enhance Fort</div>
+		<div class="aps">16</div>
+	</div>
+	<div class="order-row">
+		<div class="code">EH</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">Enter Hole</div>
+		<div class="aps">0</div>
+	</div>
+	<div class="order-row">
+		<div class="code">F</div>
+		<div class="format">[Friendliness (1-4)]<br>[Riskiness (5-9)]</div>
+		<div class="name">Friendliness/Riskiness</div>
+		<div class="aps">0</div>
+	</div>
+	<div class="order-row">
+		<div class="code">FD</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">Follow Dark</div>
+		<div class="aps">0</div>
+	</div>
+	<div class="order-row">
+		<div class="code">FF</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">Follow Fuvah</div>
+		<div class="aps">0</div>
+	</div>
+	<div class="order-row">
+		<div class="code">FL</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">Follow Light</div>
+		<div class="aps">0</div>
+	</div>
+	<div class="order-row">
+		<div class="code">FM</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">Find Mount</div>
+		<div class="aps">0</div>
+	</div>
+	<div class="order-row">
+		<div class="code">FS</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">Fort Stay</div>
+		<div class="aps">0</div>
+	</div>
+	<div class="order-row">
+		<div class="code">G</div>
+		<div class="format">[Item#] [Qty]</div>
+		<div class="name">Get from Cache</div>
+		<div class="aps">0</div>
+	</div>
+	<div class="order-row">
+		<div class="code">GC</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">Glean Cache</div>
+		<div class="aps">0</div>
+	</div>
+	<div class="order-row">
+		<div class="code">GF</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">Guard Fort</div>
+		<div class="aps">0</div>
+	</div>
+	<div class="order-row">
+		<div class="code">GL</div>
+		<div class="format">Monster# or 0</div>
+		<div class="name">Group Leader</div>
+		<div class="aps">0</div>
+	</div>
+	<div class="order-row">
+		<div class="code">GT</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">Guard Temple</div>
+		<div class="aps">0/20</div>
+	</div>
+	<div class="order-row">
+		<div class="code">GX</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">Gather [Items]</div>
+		<div class="aps">0</div>
+	</div>
+	<div class="order-row">
+		<div class="code">H</div>
+		<div class="format">[9][Direction#][Direction#]</div>
+		<div class="name">Hunt and Forage</div>
+		<div class="aps">30</div>
+	</div>
+	<div class="order-row">
+		<div class="code">HJ</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">High Jungle Entry</div>
+		<div class="aps">4</div>
+	</div>
+	<div class="order-row">
+		<div class="code">I</div>
+		<div class="format">Monster#</div>
+		<div class="name">Initiation Ceremony</div>
+		<div class="aps">6</div>
+	</div>
+	<div class="order-row">
+		<div class="code">I</div>
+		<div class="format">Lg Qty (1-20) Sm Qty (1-40)</div>
+		<div class="name">Item Pickup Limits</div>
+		<div class="aps">0</div>
+	</div>
+	<div class="order-row">
+		<div class="code">I1</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">Inn Stay</div>
+		<div class="aps">varies</div>
+	</div>
+	<div class="order-row">
+		<div class="code">I3</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">Inn Stay</div>
+		<div class="aps">varies</div>
+	</div>
+	<div class="order-row">
+		<div class="code">I5</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">Inn Stay</div>
+		<div class="aps">varies</div>
+	</div>
+	<div class="order-row">
+		<div class="code">I7</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">Work at Inn</div>
+		<div class="aps">0</div>
+	</div>
+	<div class="order-row">
+		<div class="code">IZ</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">Inform Zoingot</div>
+		<div class="aps">60</div>
+	</div>
+	<div class="order-row">
+		<div class="code">J</div>
+		<div class="format">Action Points</div>
+		<div class="name">Jazzercize Aerobics</div>
+		<div class="aps">any#</div>
+	</div>
+	<div class="order-row">
+		<div class="code">K</div>
+		<div class="format">Action Points</div>
+		<div class="name">Kowtow</div>
+		<div class="aps">any#</div>
+	</div>
+	<div class="order-row">
+		<div class="code">KA</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">Reprint Creature Blurb</div>
+		<div class="aps">0</div>
+	</div>
+	<div class="order-row">
+		<div class="code">KB</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">Reprint Miscellaneous Blurb</div>
+		<div class="aps">0</div>
+	</div>
+	<div class="order-row">
+		<div class="code">KC</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">Kill Capture</div>
+		<div class="aps">0</div>
+	</div>
+	<div class="order-row">
+		<div class="code">KI</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">Reprint Item Blurb</div>
+		<div class="aps">0</div>
+	</div>
+	<div class="order-row">
+		<div class="code">KK</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">Kowtow Kowtow</div>
+		<div class="aps">0</div>
+	</div>
+	<div class="order-row">
+		<div class="code">KS</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">Reprint Spell Blurb</div>
+		<div class="aps">0</div>
+	</div>
+	<div class="order-row">
+		<div class="code">L</div>
+		<div class="format">Race#, Monster#, Creature#</div>
+		<div class="name">Track: Locate</div>
+		<div class="aps">6/12/24</div>
+	</div>
+	<div class="order-row">
+		<div class="code">LK</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">List Knowledge</div>
+		<div class="aps">0</div>
+	</div>
+	<div class="order-row">
+		<div class="code">LT</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">List Temples</div>
+		<div class="aps">0</div>
+	</div>
+	<div class="order-row">
+		<div class="code">M</div>
+		<div class="format">Item#</div>
+		<div class="name">Make Item</div>
+		<div class="aps">varies</div>
+	</div>
+	<div class="order-row">
+		<div class="code">N</div>
+		<div class="format">Race#, Group#, Monster#</div>
+		<div class="name">No Attack</div>
+		<div class="aps">0</div>
+	</div>
+	<div class="order-row">
+		<div class="code">NF</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">Nasty Fart</div>
+		<div class="aps">0</div>
+	</div>
+	<div class="order-row">
+		<div class="code">O</div>
+		<div class="format">Monster#</div>
+		<div class="name">Origin on Monster</div>
+		<div class="aps">0</div>
+	</div>
+	<div class="order-row">
+		<div class="code">OA</div>
+		<div class="format">Amt of Oculars</div>
+		<div class="name">Open Account</div>
+		<div class="aps">35</div>
+	</div>
+	<div class="order-row">
+		<div class="code">P</div>
+		<div class="format">[Item#] [Qty]</div>
+		<div class="name">Place in Storeroom</div>
+		<div class="aps">0</div>
+	</div>
+	<div class="order-row">
+		<div class="code">P</div>
+		<div class="format">[Item#] [Qty]</div>
+		<div class="name">Sell to Far Inn</div>
+		<div class="aps">0</div>
+	</div>
+	<div class="order-row">
+		<div class="code">P#</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">Purchase From Inn</div>
+		<div class="aps">0</div>
+	</div>
+	<div class="order-row">
+		<div class="code">P#</div>
+		<div class="format">P1, P2, P3, P4, P9</div>
+		<div class="name">Purchase Railway Ticket</div>
+		<div class="aps">100-1000</div>
+	</div>
+	<div class="order-row">
+		<div class="code">PR</div>
+		<div class="format">[Item#] [Qty]</div>
+		<div class="name">Permanently Rid</div>
+		<div class="aps">0</div>
+	</div>
+	<div class="order-row">
+		<div class="code">PT</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">Pay Troll</div>
+		<div class="aps">10</div>
+	</div>
+	<div class="order-row">
+		<div class="code">Q</div>
+		<div class="format">Action Points</div>
+		<div class="name">Quest for Knowledge</div>
+		<div class="aps">any#</div>
+	</div>
+	<div class="order-row">
+		<div class="code">R</div>
+		<div class="format">Item#</div>
+		<div class="name">Rid</div>
+		<div class="aps">0</div>
+	</div>
+	<div class="order-row">
+		<div class="code">R</div>
+		<div class="format">Item#</div>
+		<div class="name">Repair</div>
+		<div class="aps">8</div>
+	</div>
+	<div class="order-row">
+		<div class="code">RC</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">Release Control</div>
+		<div class="aps">0</div>
+	</div>
+	<div class="order-row">
+		<div class="code">S</div>
+		<div class="format">Race#, Monster#</div>
+		<div class="name">Track: Snatch</div>
+		<div class="aps">6/12/24</div>
+	</div>
+	<div class="order-row">
+		<div class="code">T</div>
+		<div class="format">[9] Direction# [Direction#]</div>
+		<div class="name">Travel</div>
+		<div class="aps">10/20</div>
+	</div>
+	<div class="order-row">
+		<div class="code">TI1</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">Tower Stay</div>
+		<div class="aps">varies</div>
+	</div>
+	<div class="order-row">
+		<div class="code">TI3</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">Tower Stay</div>
+		<div class="aps">varies</div>
+	</div>
+	<div class="order-row">
+		<div class="code">TI7</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">Work at Tower</div>
+		<div class="aps">varies</div>
+	</div>
+	<div class="order-row">
+		<div class="code">TK</div>
+		<div class="format">[1-7]</div>
+		<div class="name">Tower Skill Training</div>
+		<div class="aps">varies</div>
+	</div>
+	<div class="order-row">
+		<div class="code">TM</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">Totem Markings</div>
+		<div class="aps">20/30</div>
+	</div>
+	<div class="order-row">
+		<div class="code">TP</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">Trap Pit</div>
+		<div class="aps">2</div>
+	</div>
+	<div class="order-row">
+		<div class="code">TS</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">Temple Sacrifice</div>
+		<div class="aps">8</div>
+	</div>
+	<div class="order-row">
+		<div class="code">TT</div>
+		<div class="format">Tower#</div>
+		<div class="name">Tower Teleport</div>
+		<div class="aps">100</div>
+	</div>
+	<div class="order-row">
+		<div class="code">TV</div>
+		<div class="format">1-3</div>
+		<div class="name">Troll Voodoo</div>
+		<div class="aps">60</div>
+	</div>
+	<div class="order-row">
+		<div class="code">TW</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">Train/Work Mount</div>
+		<div class="aps">24/8</div>
+	</div>
+	<div class="order-row">
+		<div class="code">TX</div>
+		<div class="format">[7-9]</div>
+		<div class="name">Tower Spell Training</div>
+		<div class="aps">varies</div>
+	</div>
+	<div class="order-row">
+		<div class="code">U</div>
+		<div class="format">Item#</div>
+		<div class="name">Use/Consume</div>
+		<div class="aps">varies</div>
+	</div>
+	<div class="order-row">
+		<div class="code">V#</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">Voodoo Instruction</div>
+		<div class="aps">varies</div>
+	</div>
+	<div class="order-row">
+		<div class="code">VM</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">Voodoo Master</div>
+		<div class="aps">60</div>
+	</div>
+	<div class="order-row">
+		<div class="code">W</div>
+		<div class="format">[Item#] [Action Points]</div>
+		<div class="name">Weapon Practice</div>
+		<div class="aps">any#</div>
+	</div>
+	<div class="order-row">
+		<div class="code">W#</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">Inn Weapon Training</div>
+		<div class="aps">varies</div>
+	</div>
+	<div class="order-row">
+		<div class="code">WO</div>
+		<div class="format">Amount of Oculars</div>
+		<div class="name">Withdraw Oculars</div>
+		<div class="aps">20</div>
+	</div>
+	<div class="order-row">
+		<div class="code">WR</div>
+		<div class="format">Item#</div>
+		<div class="name">Weekly Rid</div>
+		<div class="aps">0</div>
+	</div>
+	<div class="order-row">
+		<div class="code">X</div>
+		<div class="format">Item# Monster#</div>
+		<div class="name">Transfer Item</div>
+		<div class="aps">0</div>
+	</div>
+	<div class="order-row">
+		<div class="code">X</div>
+		<div class="format">[Item#] [Qty]</div>
+		<div class="name">Place in Treasure Room</div>
+		<div class="aps">0</div>
+	</div>
+	<div class="order-row">
+		<div class="code">X7-9</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">Inn Knowledge</div>
+		<div class="aps">varies</div>
+	</div>
+	<div class="order-row">
+		<div class="code">X6</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">Inn Riding Lesson</div>
+		<div class="aps">30</div>
+	</div>
+	<div class="order-row">
+		<div class="code">X1-3</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">Inn Lore Master Knowledge</div>
+		<div class="aps">80</div>
+	</div>
+	<div class="order-row">
+		<div class="code">XC</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">Xanxu Construct</div>
+		<div class="aps">210</div>
+	</div>
+	<div class="order-row">
+		<div class="code">XR</div>
+		<div class="format">&nbsp;</div>
+		<div class="name">Cross Railway Bridge</div>
+		<div class="aps">20</div>
+	</div>
+	<div class="order-row">
+		<div class="code">Y</div>
+		<div class="format">Yell#</div>
+		<div class="name">Yell Loudly</div>
+		<div class="aps">0</div>
+	</div>
+	<div class="order-row">
+		<div class="code">Z</div>
+		<div class="format">Action Pts</div>
+		<div class="name">Rebuild Ruins</div>
+		<div class="aps">any#</div>
+	</div>
+</div>
+
+<script>
+	// Extract data from DOM and store references
+	const ordersData = [];
+	const container = document.getElementById('ordersContainer');
+	const rows = container.querySelectorAll('.order-row:not(.section-header)');
+
+	rows.forEach(row => {
+		const cells = row.querySelectorAll('div');
+		ordersData.push({
+			code: cells[0]?.textContent.trim() || '',
+			format: cells[1]?.textContent.trim() || '',
+			name: cells[2]?.textContent.trim() || '',
+			aps: cells[3]?.textContent.trim() || '',
+			element: row
+		});
+	});
+
+	// Search functionality
+	const searchInput = document.getElementById('searchInput');
+
+	searchInput.addEventListener('input', (e) => {
+		const query = e.target.value.toLowerCase();
+		ordersData.forEach(order => {
+			const matches = order.code.toLowerCase().includes(query) ||
+						   order.format.toLowerCase().includes(query) ||
+						   order.name.toLowerCase().includes(query);
+			order.element.style.display = matches ? 'grid' : 'none';
+		});
+	});
+
+	// Sorting functionality
+	let sortOrder = { code: 1, name: 1 };
+
+	document.querySelectorAll('.sortable').forEach(header => {
+		header.addEventListener('click', () => {
+			const col = header.dataset.sort;
+
+			// Toggle sort order
+			sortOrder[col] *= -1;
+
+			// Sort data
+			const sorted = [...ordersData].sort((a, b) => {
+				let valA = a[col];
+				let valB = b[col];
+
+				// String comparison (case-insensitive)
+				valA = valA.toLowerCase();
+				valB = valB.toLowerCase();
+
+				if (valA < valB) return -1 * sortOrder[col];
+				if (valA > valB) return 1 * sortOrder[col];
+				return 0;
+			});
+
+			// Re-render
+			container.innerHTML = '';
+			sorted.forEach(order => {
+				container.appendChild(order.element);
+			});
+		});
+	});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+.blurbs-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	gap: 10px;
+	margin-bottom: 20px;
+}
+
+.blurb-item {
+	padding: 12px 15px;
+	background-color: var(--bg-soft);
+	border-radius: 6px;
+	border: 1px solid var(--bg-hard);
+	transition: all 0.2s;
+}
+
+.blurb-item:hover {
+	background-color: var(--bg-hard);
+	border-color: var(--gray);
+	transform: translateX(3px);
+}
+
+.blurb-item a {
+	color: var(--blue);
+	text-decoration: none;
+	font-weight: 500;
+}
+
+.blurb-item a:hover {
+	color: var(--green);
+	text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+	.blurbs-grid {
+		grid-template-columns: 1fr;
+	}
+}

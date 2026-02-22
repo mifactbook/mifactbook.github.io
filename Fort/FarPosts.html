@@ -1,0 +1,475 @@
+---
+---
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Far Posts</title>
+	<link rel="stylesheet" href="../scripts/css/gruvbox-theme.css">
+	<link rel="stylesheet" href="../scripts/css/Fort.css">
+	<link rel="stylesheet" href="../scripts/css/blurbs-grid.css">
+
+	<style>
+		.fort-nav-grid {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: 10px;
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+
+<body>
+
+{% include nav.html %}
+
+<div id="fortNavContainer" class="fort-nav-grid">
+	<div class="blurb-item"><a href="../Fort/FarExoticas.html">Far Exoticas</a></div>
+	<div class="blurb-item"><a href="../Fort/FarForges.html">Far Forges</a></div>
+	<div class="blurb-item"><a href="../Fort/FarInns.html">Far Inns</a></div>
+	<div class="blurb-item active">Far Posts</div>
+	<div class="blurb-item"><a href="../Fort/FarBanks.html">Jossman Imperial Banks</a></div>
+	<div class="blurb-item"><a href="../Fort/RailwayStations.html">Railway Stations</a></div>
+	<div class="blurb-item"><a href="../Fort/Towers.html">Towers</a></div>
+	<div class="blurb-item"><a href="../Fort/TrollShoppes.html">Troll Shoppes</a></div>
+</div>
+
+<div class="search-container">
+	<input type="text" id="searchInput" class="search-input" placeholder="Search...">
+</div>
+
+<div class="table-header">
+	<div class="sortable" data-sort="coordinates">Coordinates</div>
+	<div class="sortable" data-sort="name">Name</div>
+</div>
+
+<div id="locationsContainer">
+	<div class="location-row">
+		<div class="coordinates">(39, 73)</div>
+		<div class="name">Dallan (366)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-139, 53)</div>
+		<div class="name">Dallar (848)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(40, 138)</div>
+		<div class="name">Dallon (78)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(62, 78)</div>
+		<div class="name">Dallor (450)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(24, 121)</div>
+		<div class="name">Daltor (749)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-182, 80)</div>
+		<div class="name">Daslar (788)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-129, 47)</div>
+		<div class="name">Daslok (613)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-124, 108)</div>
+		<div class="name">Daslon (224)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-160, 80)</div>
+		<div class="name">Dastak (25)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-16, 21)</div>
+		<div class="name">Dastan (715)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-109, 133)</div>
+		<div class="name">Dillan (589)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(39, 43)</div>
+		<div class="name">Dillon (619)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-142, 138)</div>
+		<div class="name">Dillor (444)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-109, 13)</div>
+		<div class="name">Diltak (67)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-6, 47)</div>
+		<div class="name">Diltan (237)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-23, 49)</div>
+		<div class="name">Diltok (907)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-154, 53)</div>
+		<div class="name">Dilton (810)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-67, 14)</div>
+		<div class="name">Dislan (372)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-82, 10)</div>
+		<div class="name">Dislok (861)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-110, 41)</div>
+		<div class="name">Dislon (733)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(66, 139)</div>
+		<div class="name">Dislor (494)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-95, 41)</div>
+		<div class="name">Distan (347)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-63, 45)</div>
+		<div class="name">Distok (179)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-90, 125)</div>
+		<div class="name">Diston (775)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-151, 122)</div>
+		<div class="name">Distor (689)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-157, 100)</div>
+		<div class="name">Fallan (591)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(72, 265)</div>
+		<div class="name">Fallar (965)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(74, 49)</div>
+		<div class="name">Fallor (19)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-69, 77)</div>
+		<div class="name">Faltan (132)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(62, 118)</div>
+		<div class="name">Faltar (495)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-166, 132)</div>
+		<div class="name">Faslak (473)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(23, 78)</div>
+		<div class="name">Faslar (844)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-50, 91)</div>
+		<div class="name">Faslon (319)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(49, 52)</div>
+		<div class="name">Faslor (453)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-91, 79)</div>
+		<div class="name">Fastan (371)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(81, 122)</div>
+		<div class="name">Fillan (209)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(28, 73)</div>
+		<div class="name">Filar (845)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-168, 22)</div>
+		<div class="name">Fillar (505)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-15, 116)</div>
+		<div class="name">Fillok (703)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(48, 11)</div>
+		<div class="name">Filtan (127)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(65, 57)</div>
+		<div class="name">Filtok (4)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-161, 266)</div>
+		<div class="name">Filton (474)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(9, 58)</div>
+		<div class="name">???? (858)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(20, 105)</div>
+		<div class="name">Filtor (718)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-7, 136)</div>
+		<div class="name">Fislar (57)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-82, 38)</div>
+		<div class="name">Fislok (192)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-48, 109)</div>
+		<div class="name">Fislor (999)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-116, 89)</div>
+		<div class="name">Fistan (467)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-127, 172)</div>
+		<div class="name">Hokan (165)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(2, 124)</div>
+		<div class="name">Kallan (8)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-132, 77)</div>
+		<div class="name">Kallar (579)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(21, 48)</div>
+		<div class="name">Kallok(185)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(93, 45)</div>
+		<div class="name">Kallon (650)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(53, 21)</div>
+		<div class="name">Kallor (2)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-35, 102)</div>
+		<div class="name">Kaslar (967)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-17, 76)</div>
+		<div class="name">Kastan (55)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-177, 106)</div>
+		<div class="name">Kastar (45)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-94, 104)</div>
+		<div class="name">Killak (569)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-96, 11)</div>
+		<div class="name">Killon (447)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(80, 79)</div>
+		<div class="name">Killor (904)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-122, 16)</div>
+		<div class="name">Kiltak (81)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-111, 69)</div>
+		<div class="name">Kiltar (199)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-180, 14)</div>
+		<div class="name">Kiltok (785)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-28, 20)</div>
+		<div class="name">Kilton (674)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-45, 67)</div>
+		<div class="name">Kiltor (271)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-152, 3)</div>
+		<div class="name">Kislon (768)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-40, 12)</div>
+		<div class="name">Kistan (64)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(4, 79)</div>
+		<div class="name">Kistar (951)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-178, 41)</div>
+		<div class="name">Kistok (507)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-27, 178)</div>
+		<div class="name">Kiston (191)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(77, 17)</div>
+		<div class="name">Kiston (233)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-4, 101)</div>
+		<div class="name">Kistor (990)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(82, 168)</div>
+		<div class="name">Migton (82)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-37, 17)</div>
+		<div class="name">Selluk (???)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(23, 174)</div>
+		<div class="name">Seltuk (173)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-63, 177)</div>
+		<div class="name">Talor (154)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-175, 171)</div>
+		<div class="name">Tomas (847)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(90, 22)</div>
+		<div class="name">Wallar (877)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-106, 112)</div>
+		<div class="name">Wallon (677)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(49, 101)</div>
+		<div class="name">Wallor (600)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-168, 51)</div>
+		<div class="name">Waltan (942)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(101, 116)</div>
+		<div class="name">Waltar (115)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(43, 115)</div>
+		<div class="name">Waltok (620)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-60, 134)</div>
+		<div class="name">Walton (137)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-52, 13)</div>
+		<div class="name">Waltor (730)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-28, 127)</div>
+		<div class="name">Waslak (126)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-47, 45)</div>
+		<div class="name">Waslan (876)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(22, 20)</div>
+		<div class="name">Waslon (923)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-137, 21)</div>
+		<div class="name">Waslor (492)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(98, 84)</div>
+		<div class="name">Wastak (644)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-38, 48)</div>
+		<div class="name">Wastan (490)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(87, 98)</div>
+		<div class="name">Waston (201)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-186, 127)</div>
+		<div class="name">Wastor (911)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(33, 17)</div>
+		<div class="name">Willan (466)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-88, 268)</div>
+		<div class="name">Willar (181)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-131, 124)</div>
+		<div class="name">Willon (962)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(9, 25)</div>
+		<div class="name">Wiltak (845)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-150, 23)</div>
+		<div class="name">Wiltar (206)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-19, 94)</div>
+		<div class="name">Wiltok (652)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-8, 268)</div>
+		<div class="name">Wiltor (58)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-138, 102)</div>
+		<div class="name">Wislan (161)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-72, 100)</div>
+		<div class="name">Wislok (885)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(65, 22)</div>
+		<div class="name">Wislon (854)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-4, 17)</div>
+		<div class="name">Wistak (346)</div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(72, 102)</div>
+		<div class="name">Wistan (418)</div>
+	</div>
+</div>
+
+<script src="../scripts/js/Fort.js" type="text/javascript"></script>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+---
+---
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Trail</title>
+	<link rel="stylesheet" href="../scripts/css/gruvbox-theme.css">
+
+	<style>
+		.info-section {
+			background-color: var(--bg-soft);
+			border: 1px solid var(--bg-hard);
+			border-radius: 8px;
+			padding: 20px;
+			margin-bottom: 20px;
+		}
+
+		.info-section h2 {
+			color: var(--yellow);
+			font-size: 1.5em;
+			margin-bottom: 10px;
+			border-bottom: 2px solid var(--bg1);
+			padding-bottom: 8px;
+		}
+
+		.info-section p {
+			color: var(--fg);
+			line-height: 1.6;
+			margin-bottom: 10px;
+		}
+
+		.info-section a {
+			color: var(--aqua);
+			text-decoration: none;
+		}
+
+		.info-section a:hover {
+			color: var(--green);
+			text-decoration: underline;
+		}
+	</style>
+</head>
+
+<body>
+
+{% include nav.html %}
+
+<header>
+	<h1>Trail &amp; Paths</h1>
+</header>
+
+<div class="info-section">
+	<p>
+		Throughout the island you will find paths that lead from one square to another. Paths intersect at the center of a square and it's possible, but unlikely, to have 8 paths leading out from a square.
+		The travel of Monsters and Creatures causes a path to become more beaten down. TRAILS are well beaten paths and may indicate a major travel route. PATHS are lesser trails. To follow a TRAIL or PATH use
+		the HUNT or TRAVEL order and precede your Direction(s) with a 9. Example: H 934. This is useful when moving into terrain you have not visited before and will have you head in the general direction
+		specified on the most worn path or trail. If the trail or path disappears then you'll move in the direction specified.
+	</p>
+</div>
+
+<div class="info-section">
+	<h2>Following Trail / Path Notes</h2>
+	<p>
+		Here's a good example: If you write T 923 this means that you'll move one square either N, NE, or E (whichever has the most worn Trail/Path) - if there's no Trail/Path in these three directions you'll go NE...even if there's a Trail/Path heading in any of the other 5 directions.
+		Next you'll move one square either NE, E, or SE. What's nice is that when you're following a Trail/Path it will usually keep to the same direction or veer to an adjacent direction, so that the Follow Trail/Path order will almost always keep you on the Trail/Path until it ends.
+	</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+---
+---
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+	<title>Read Scroll</title>
+	<link href="../scripts/css/gruvbox-theme.css" rel="stylesheet"/>
+	<link href="../scripts/css/info-section.css" rel="stylesheet"/>
+	<link href="../scripts/css/5-column-display.css" rel="stylesheet"/>
+</head>
+
+<body>
+
+{% include nav.html %}
+
+<header>
+	<h1>Read Scroll</h1>
+</header>
+
+<div class="spell-stats">
+	<div class="stats-list">
+		<div class="stats-header">
+			<div class="stats-col">No</div>
+			<div class="stats-col">Format</div>
+			<div class="stats-col">Spell Points</div>
+			<div class="stats-col">Action Points</div>
+		</div>
+
+		<div class="stats-row">
+			<div class="stats-col">25</div>
+			<div class="stats-col">C 25</div>
+			<div class="stats-col">18</div>
+			<div class="stats-col">5</div>
+		</div>
+	</div>
+</div>
+
+<div class="info-section">
+	<p>
+		By casting this Spell on a <a href="../Items/Scrolls.html">Magic Scroll</a> in your posession, it alters the Scroll in such a way that you can now read its contents.
+		To cast this spell issue the CAST SPELL order: C 25 (<a href="../Items/Scrolls.html">Item# of Scroll</a>). This takes 5 Action Points and uses up 18 Spell Points. Reading a scroll destroys it but gains you
+		the permanent knowledge of the scroll. This is why it's quite smart to first cast an <a href="../Blurbs/IdentifyScroll.html">Identify Scroll</a> spell on an <a href="../Blurbs/UnreadableScroll.html">Unreadable Scroll</a>.
+	</p>
+</div>
+
+</body>
+</html>

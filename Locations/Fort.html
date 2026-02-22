@@ -1,0 +1,74 @@
+---
+---
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Fort</title>
+	<link rel="stylesheet" href="../scripts/css/gruvbox-theme.css">
+
+	<style>
+		.info-section {
+			background-color: var(--bg-soft);
+			border: 1px solid var(--bg-hard);
+			border-radius: 8px;
+			padding: 20px;
+			margin-bottom: 20px;
+		}
+
+		.info-section h2 {
+			color: var(--yellow);
+			font-size: 1.5em;
+			margin-bottom: 10px;
+			border-bottom: 2px solid var(--bg1);
+			padding-bottom: 8px;
+		}
+
+		.info-section p {
+			color: var(--fg);
+			line-height: 1.6;
+			margin-bottom: 10px;
+		}
+
+		.info-section a {
+			color: var(--aqua);
+			text-decoration: none;
+		}
+
+		.info-section a:hover {
+			color: var(--green);
+			text-decoration: underline;
+		}
+	</style>
+</head>
+
+<body>
+
+{% include nav.html %}
+
+<header>
+	<h1>Fort</h1>
+</header>
+
+<div class="info-section">
+	<p>
+		A newly rebuilt Fort consists of a semi-secure wall and a building in its center. The largest room is the stable where two dozen Mounts can be stabled. The next largest room is the bunk room which has a dozen bunk beds.
+		There is also a storage room, an outhouse (without water), and a double-room consisting of living quarters and workroom suitable for a single permanent resident. A Fort is owned/controlled by whoever occupies it.
+		When occupied, other Monsters have to force their way in. They'll be subject to the Fort's traps (if any) and have to fight the occupants of the fort - except for your own Group's members.
+</div>
+
+<div class="info-section">
+	<h2>Fort Orders</h2>
+	<p>
+		To camp in a fort, issue the FORT STAY order: FS. This is excellent for recovering Health. To guard/camp in Fort, issue the GUARD FORT order: GF. This has you camp in the fort, but you'll be on guard for intruders and consequently,
+		recover less Health. To make some sort of physical improvement to the fort, issue the ENHANCE FORT order: EF. This requires 16 Action Points and may result in taking one or more of your possessions and making it a permanent part of the fort.
+		To place items in the store room, issue the PLACE order: P (Item#) (Qty). To remove items, issue the BRING order: B (Item#) (Qty). Note: Food cannot be placed in the store room. If the square already has your Group's Totem Markings,
+		you can issue the TM order to mark the fort.
+	</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+---
+---
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dream Location</title>
+	<link rel="stylesheet" href="../scripts/css/gruvbox-theme.css">
+	<link href="../scripts/css/5-column-display.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="../scripts/css/info-section.css">
+
+	<style>
+		.spell-stats {
+			width: auto;
+		}
+
+		.stats-col a {
+			color: var(--blue);
+			text-decoration: none;
+		}
+
+		.stats-col a:hover {
+			text-decoration: underline;
+		}
+
+		.stats-header, .stats-row { grid-template-columns: 2fr 5fr 2fr 2fr 5fr; }
+	</style>
+</head>
+
+<body>
+
+{% include nav.html %}
+
+<header>
+	<h1>Dream Location</h1>
+</header>
+
+<div class="spell-stats">
+	<div class="stats-list">
+		<div class="stats-header">
+			<div class="stats-col">Coordinates</div>
+			<div class="stats-col">Description</div>
+			<div class="stats-col">Order</div>
+			<div class="stats-col">Action Points</div>
+			<div class="stats-col">Notes</div>
+		</div>
+
+		<div class="stats-row">
+			<div class="stats-col">(-8, 261)</div>
+			<div class="stats-col">Some Small Holes in the Ground</div>
+			<div class="stats-col">U 28</div>
+			<div class="stats-col">60</div>
+			<div class="stats-col"><a href="../Blurbs/JuteRope.html">Jute Rope (#28)</a></div>
+		</div>
+
+		<div class="stats-row">
+			<div class="stats-col">(89, 236)</div>
+			<div class="stats-col">Half Submerged Ship</div>
+			<div class="stats-col">U 115</div>
+			<div class="stats-col">80</div>
+			<div class="stats-col"><a href="../Blurbs/PufferWings.html">Puffer Wings (#115)</a><br>Can't use <a href="../Blurbs/Float.html">Float</a></div>
+		</div>
+
+		<div class="stats-row">
+			<div class="stats-col">(19, 221)</div>
+			<div class="stats-col">A Patch of the Hills Where the Crystal Seems Thin</div>
+			<div class="stats-col">U 127</div>
+			<div class="stats-col">80</div>
+			<div class="stats-col"><a href="../Blurbs/ScorpionTail.html">Scorpion Fork (#197)</a></div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

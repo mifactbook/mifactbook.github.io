@@ -1,0 +1,126 @@
+/* Gruvbox Dark Theme - Shared Styles */
+@import "IosevkaEtoile.css";
+
+:root {
+	--bg: #282828;
+	--bg0: #1d2021;
+	--bg1: #3c3836;
+	--bg-soft: #32302f;
+	--bg-hard: #1d2021;
+	--fg: #ebdbb2;
+	--fg-dim: #a89984;
+	--red: #fb4934;
+	--green: #b8bb26;
+	--yellow: #fabd2f;
+	--blue: #83a598;
+	--purple: #d3869b;
+	--aqua: #8ec07c;
+	--orange: #fe8019;
+	--gray: #928374;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: var(--bg);
+	color: var(--fg);
+	font-family: "Iosevka Etoile Web";
+	padding: 20px;
+	line-height: 1.6;
+}
+
+/* Navigation Styles */
+nav {
+	background: var(--bg1);
+	padding: 15px;
+	border-radius: 8px;
+	margin-bottom: 20px;
+	border: 1px solid var(--gray);
+}
+
+nav ul {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+nav a {
+	color: var(--blue);
+	text-decoration: none;
+	font-weight: 500;
+	transition: color 0.2s;
+}
+
+nav a:hover {
+	color: var(--aqua);
+}
+
+nav .active,
+nav strong {
+	color: var(--yellow);
+	font-weight: bold;
+}
+
+/* Header Styles */
+header {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+header img {
+	max-width: 64px;
+	height: auto;
+	margin-bottom: 10px;
+}
+
+h1 {
+	color: var(--yellow);
+	font-size: 2.5em;
+	margin-bottom: 10px;
+	font-family: "Iosevka Etoile Web Oblique"
+}
+
+/* Search Container */
+.search-container {
+	margin-bottom: 20px;
+}
+
+.search-input,
+#searchInput {
+	width: 100%;
+	max-width: 500px;
+	padding: 12px 20px;
+	background: var(--bg0);
+	color: var(--fg);
+	border: 2px solid var(--bg1);
+	border-radius: 8px;
+	font-size: 1em;
+}
+
+.search-input:focus,
+#searchInput:focus {
+	outline: none;
+	border-color: var(--blue);
+}
+
+/* Sortable Headers */
+.sortable {
+	cursor: pointer;
+	user-select: none;
+}
+
+.sortable:hover {
+	color: var(--yellow);
+}
+
+.sortable::after {
+	content: '\2195';
+	font-size: 0.8em;
+	color: var(--gray);
+	margin-left: 0.3em;
+}

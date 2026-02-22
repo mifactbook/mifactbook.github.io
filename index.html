@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="data:,">
+	<title>Monster Island Fact Book</title>
+	<link rel="stylesheet" href="scripts/css/gruvbox-theme.css">
+
+	<style>
+		.hero {
+			text-align: center;
+			margin-bottom: 40px;
+		}
+
+		.hero h1 {
+			color: var(--yellow);
+			font-size: 2em;
+			margin-bottom: 10px;
+		}
+
+		.nav-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+			gap: 15px;
+			margin-bottom: 30px;
+		}
+
+		.nav-card {
+			padding: 20px;
+			background-color: var(--bg-soft);
+			border-radius: 8px;
+			border: 2px solid var(--bg-hard);
+			transition: all 0.3s;
+			text-align: center;
+		}
+
+		.nav-card:hover {
+			background-color: var(--bg-hard);
+			border-color: var(--aqua);
+			transform: translateY(-5px);
+			box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+		}
+
+		.nav-card a {
+			color: var(--aqua);
+			text-decoration: none;
+			font-size: 1em;
+			font-weight: 600;
+			display: block;
+		}
+
+		.nav-card:hover a {
+			color: var(--green);
+		}
+
+		.nav-card p {
+			color: var(--fg-dim);
+			margin-top: 10px;
+			margin-bottom: 0;
+		}
+
+		@media (max-width: 768px) {
+			.hero h1 {
+				font-size: 1em;
+			}
+
+			.nav-grid,
+			.secondary-grid {
+				grid-template-columns: 1fr;
+			}
+
+			.nav-card a {
+				font-size: 1em;
+			}
+		}
+	</style>
+</head>
+
+<body>
+
+<div class="hero">
+	<h1>Monster Island Fact Book</h1>
+</div>
+
+<div class="nav-grid">
+	<div class="nav-card">
+		<a href="Blurbs/AllBlurbs.html">Blurbs</a>
+	</div>
+
+	<div class="nav-card">
+		<a href="Items/AllCreaturesByName.html">Creatures</a>
+	</div>
+
+	<div class="nav-card">
+		<a href="Items/Gods.html">Gods & Demigods</a>
+	</div>
+
+	<div class="nav-card">
+		<a href="Items/AllItemsByName.html">Items</a>
+	</div>
+
+	<div class="nav-card">
+		<a href="Items.html">Items by Category</a>
+	</div>
+
+	<div class="nav-card">
+		<a href="Locations.html">Locations</a>
+	</div>
+
+	<div class="nav-card">
+		<a href="Orders.html">Orders</a>
+	</div>
+
+	<div class="nav-card">
+		<a href="Items/Phenotypes.html">Phenotypes</a>
+	</div>
+
+	<div class="nav-card">
+		<a href="Items/AllPlants.html">Plants</a>
+	</div>
+
+	<div class="nav-card">
+		<a href="Items/AllSpellsByName.html">Spells</a>
+	</div>
+
+	<div class="nav-card">
+		<a href="Items/Terrains.html">Terrains</a>
+	</div>
+
+	<div class="nav-card">
+		<a href="MapWhere.html">Where's That Place?</a>
+	</div>
+</div>
+
+</body>
+</html>

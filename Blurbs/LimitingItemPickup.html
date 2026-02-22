@@ -1,0 +1,28 @@
+---
+---
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Limiting Item Pickups</title>
+	<link rel="stylesheet" href="../scripts/css/gruvbox-theme.css">
+	<link href="../scripts/css/info-section.css" rel="stylesheet"/>
+</head>
+
+<body>
+
+{% include nav.html %}
+
+<header>
+	<h1>Limiting Item Pickups</h1>
+</header>
+
+<div class="info-section">
+	<p>To prevent your Monster from automatically picking up items simply found lying in a square, collecting a body part from a dead Creature, and harvesting plants, use the ITEM PICKUP LIMIT order: I (Qty of items you can carry one of - range of 11-20) (Qty of items you can carry more than one of - range of 21-40). Example: I 14 36 will have your Monster stop picking up items you can carry one of once he has 14. He also won't pickup a 37th different item of items that you can carry more than one of. The defaults are 20 and 40, respectively. This order does not affect Xfers, Buys, Sells, acquiring treasure in dark places or from a dead Monster, cache pickups, or prevent pickup/harvesting of additional quantities of an item you already have.</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+.available-section h3 {
+	color: var(--orange);
+	font-size: 1.3em;
+	margin-top: 30px;
+	margin-bottom: 15px;
+}
+
+.availability-list {
+	display: flex;
+	flex-direction: column;
+	border: 1px solid var(--bg-hard);
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+.availability-header,
+.availability-row {
+	display: grid;
+	grid-template-columns: 3fr 1fr 1fr;
+	padding: 12px;
+	border-bottom: 1px solid var(--bg-hard);
+	align-items: center;
+}
+
+.availability-header {
+	background-color: var(--bg-soft);
+	color: var(--yellow);
+	font-weight: 600;
+}
+
+.availability-row:last-child {
+	border-bottom: none;
+}
+
+.availability-row:hover {
+	background-color: var(--bg-soft);
+}
+
+.col-structure a {
+	color: var(--blue);
+	text-decoration: none;
+}
+
+.col-structure a:hover {
+	color: var(--green);
+	text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+	.availability-header,
+	.availability-row {
+		padding: 10px;
+		gap: 5px;
+	}
+}

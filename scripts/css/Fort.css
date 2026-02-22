@@ -1,0 +1,81 @@
+.table-header {
+	display: grid;
+	grid-template-columns: 150px 3fr;
+	gap: 10px;
+	padding: 12px 15px;
+	background-color: var(--bg-hard);
+	font-weight: bold;
+	color: var(--yellow);
+	border-radius: 8px;
+	margin-bottom: 10px;
+	border: 1px solid var(--gray);
+}
+
+.table-header > div {
+	cursor: pointer;
+	user-select: none;
+}
+
+.table-header > div:hover {
+	color: var(--aqua);
+}
+
+.location-row {
+	display: grid;
+	grid-template-columns: 150px 3fr;
+	gap: 10px;
+	padding: 12px 15px;
+	background-color: var(--bg-soft);
+	margin-bottom: 8px;
+	border-radius: 6px;
+	border: 1px solid var(--bg-hard);
+	transition: all 0.2s;
+}
+
+.location-row:hover {
+	background-color: var(--bg-hard);
+	border-color: var(--gray);
+	transform: translateX(3px);
+}
+
+.coordinates {
+	color: var(--blue);
+}
+
+.name {
+	color: var(--fg);
+	font-weight: 500;
+}
+
+.name a,
+.name a:link,
+.name a:visited {
+	color: var(--blue);
+	text-decoration: none;
+}
+
+.name a:hover {
+	color: var(--green);
+	text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+	.table-header {
+		display: none;
+	}
+
+	.location-row {
+		grid-template-columns: 1fr;
+		gap: 5px;
+		padding: 10px;
+	}
+
+	.location-row > div:before {
+		font-weight: bold;
+		color: var(--yellow);
+		margin-right: 10px;
+	}
+
+	.coordinates:before { content: "Coordinates: "; }
+	.name:before { content: "Name: "; }
+}

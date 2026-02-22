@@ -1,0 +1,97 @@
+---
+active_nav: Gods
+sub_nav: VladosXi
+---
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Vlados Xi</title>
+	<link rel="stylesheet" href="../scripts/css/gruvbox-theme.css">
+	<link href="../scripts/css/3-column-display.css" rel="stylesheet"/>
+	<link href="../scripts/css/info-section.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="../scripts/css/blurbs-grid.css">
+
+	<style>
+		.gods-nav-grid {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 10px;
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+
+<body>
+
+{% include nav.html %}
+
+{% include gods-nav.html %}
+
+<div class="available-section">
+	<h3>Items</h3>
+</div>
+
+<div class="spell-stats">
+	<div class="stats-list">
+		<div class="stats-header">
+			<div class="stats-col">No</div>
+			<div class="stats-col">Name</div>
+			<div class="stats-col">Carry</div>
+		</div>
+
+		<div class="stats-row">
+			<div class="stats-col">368</div>
+			<div class="stats-col"><a href="../Blurbs/CrimsonChalice.html">Crimson Chalice</a></div>
+			<div class="stats-col">3</div>
+		</div>
+	</div>
+</div>
+
+<div class="available-section">
+	<h3>Creatures</h3>
+</div>
+
+<div class="spell-stats">
+	<div class="stats-list">
+		<div class="stats-header">
+			<div class="stats-col">No</div>
+			<div class="stats-col">Name</div>
+		</div>
+
+		<div class="stats-row">
+			<div class="stats-col">255</div>
+			<div class="stats-col"><a href="../Blurbs/Ghoul.html">Ghoul</a></div>
+		</div>
+
+		<div class="stats-row">
+			<div class="stats-col">256</div>
+			<div class="stats-col"><a href="../Blurbs/Ghast.html">Ghast</a></div>
+		</div>
+	</div>
+</div>
+
+
+<div class="available-section">
+	<h3>Spells</h3>
+</div>
+
+<div class="spell-stats">
+	<div class="stats-list">
+		<div class="stats-header">
+			<div class="stats-col">No</div>
+			<div class="stats-col">Name</div>
+		</div>
+
+		<div class="stats-row">
+			<div class="stats-col">987</div>
+			<div class="stats-col"><a href="../Blurbs/Weakness.html">Weakness</a></div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

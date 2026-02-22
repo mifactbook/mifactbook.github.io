@@ -1,0 +1,489 @@
+No,Name
+61,Acorn Heart
+266,Amulet of Protection
+377,Ancient Iron Spike
+370,Ancient Silver Spike
+479,Ancient War Sword
+458,Antlered Helm
+464,Armour Wax
+235,Armoured Dragon Scale
+233,Axebeak Beak
+276,Azure Smoke Bottle
+127,Ballyhoo Scale
+441,Banded Iron Armour
+71,Bardiche
+107,Barkbrute Armour
+147,Barkbrute Skin
+73,Bastard Sword
+467,Bataroo Egg
+549,Bataroo Egg
+257,Battle Grease
+453,Beak Axe
+157,Belly Baub
+131,Belt & Straps
+119,Bigschnozz Charm
+228,Billabob Bill
+455,Billabob Dagger
+38,Bird Trap
+89,Bit Coin
+134,Black Arrow
+132,Black Arrow Shaft
+133,Black Arrowhead
+354,Black Ball
+87,Black Cave Spore
+555,Black Granite
+412,Black Iron Gauntlets
+422,Black Iron Greaves
+402,Black Iron Helm
+432,Black Iron Shield
+17,Black Lotus Leaf*P:
+460,Black Lotus Tar
+32,Black Pack Rowt Lens
+120,Blackbone Ring
+475,Blade of Doom
+39,Bloated Onion
+495,Blood Bauble
+166,Blood Mite Eye
+242,Blood Thorn
+504,Bloody Gorget
+239,Bloody Shirt
+1,Blow Pipe
+550,Blue Granite
+414,Blue Iron Gauntlets
+424,Blue Iron Greaves
+404,Blue Iron Helm
+434,Blue Iron Shield
+450,Bodden Ring Statue
+117,Bolotamus Muscle
+135,Bone Collar
+237,Bone Toothpick
+100,Bori Log Raft
+18,Bori Logs
+65,Bow String
+508,Bramble Dart
+193,Brass Amulet
+192,Brass Ring
+66,Brawn Elixir
+101,Broadsword
+77,Bronze Scimitar
+206,Butchers Cleaver
+40,Calabash Pipe
+454,Carbuncle Helm
+231,Carbuncle Shell
+164,Carrion Talon
+4,Carved Club
+207,Cat Antlers
+471,Catapult of Doom
+76,Cavalry Sabre
+161,Cave-Pecker Feather
+212,Chaser Plate
+216,Chaser Plate Armour
+137,Cheesmo Pouch
+241,Clump of Ock Fuzz
+25,Coconut
+165,Copper Ingot
+102,Crab Buckler
+138,Crab Exoscale
+368,Crimson Chalice
+189,Crobbler Skin
+3,Crude Spear
+262,Crystal Ball
+223,Crystal Claw
+468,Crystal-tipped Whip
+93,Curved Machete
+13,Dactyl Hide
+8,Dactyl Whip
+472,Dagger of Doom
+411,Damaged Black Iron Gauntlets
+421,Damaged Black Iron Greaves
+401,Damaged Black Iron Helm
+431,Damaged Black Iron Shield
+413,Damaged Blue Iron Gauntlets
+423,Damaged Blue Iron Greaves
+403,Damaged Blue Iron Helm
+433,Damaged Blue Iron Shield
+415,Damaged Green Iron Gauntlets
+425,Damaged Green Iron Greaves
+405,Damaged Green Iron Helm
+435,Damaged Green Iron Shield
+348,Damaged Heavy Iron Shield
+342,Damaged Iron Dagger
+344,Damaged Iron Gauntlets
+345,Damaged Iron Greaves
+343,Damaged Iron Helm
+341,Damaged Iron Knife
+346,Damaged Iron Shield
+417,Damaged Ivory Iron Gauntlets
+427,Damaged Ivory Iron Greaves
+407,Damaged Ivory Iron Helm
+437,Damaged Ivory Iron Shield
+347,Damaged Large Iron Shield
+419,Damaged Red Iron Gauntlets
+429,Damaged Red Iron Greaves
+409,Damaged Red Iron Helm
+439,Damaged Red Iron Shield
+312,Damaged Silver Dagger
+314,Damaged Silver Gauntlets
+315,Damaged Silver Greaves
+313,Damaged Silver Helm
+311,Damaged Silver Knife
+59,Dark Lance
+72,Dark Scourge
+319,Dark Sword
+97,Dark Throwing Star
+491,Death-Eagle Mask
+493,Death-God Orb
+501,Death-God Shield
+492,Death-Serpent Mask
+84,Deja Voodoo Elixir
+139,Demon Condor Feather
+513,Demon Hide
+256,Designer Tunic
+184,Detect Above Ground Places Scroll
+156,Detect Caches Scroll
+181,Detect Creatures Scroll
+169,Detect Dark Places Scroll
+188,Detect Ghosts Scroll
+172,Detect Items Scroll
+177,Detect Mounts Scroll
+168,Detect Natural Hazards Scroll
+155,Detect Plants Scroll
+183,Detect Sacrosancts Scroll
+201,Diamond Brooch
+385,Dragon Flagon
+380,Dragon Ichor
+374,Dragonbone
+390,Dragonbone Necklace
+326,Dragonbone Sword
+327,Dragonhide Armour
+329,Dragonhide Shield
+43,Driftclub
+91,Dust of the Entombed
+465,Elixir Foliculata
+264,Elixir of Acid
+263,Elixir of Fire
+265,Elixir of Lethargy
+267,Elixir of Poison
+279,Emerald Smoke Bottle
+217,Emu Dart
+280,Erratic Smoke Bottle
+391,Ethereal Blade
+299,Ethereal Hammer
+389,Ethereal Lance
+300,Ethereal Needle
+387,Ethereal Scimitar
+392,Ethereal Scourge
+478,Executioners Blade
+34,Fart Bomb
+442,Field Plate Armour
+111,Filled Waterskin
+376,Fire Dust
+69,Firestone
+146,Flaming Gourd
+171,Fluffy Hogtail
+99,Food
+218,Frog Bladder
+443,Full Plate Armour
+29,Funnel Snakeskin
+108,Gaba Stone
+449,Gargoyle Statue
+6,Gator Armour
+11,Gator Hide
+12,Giant Tortoise Shell
+202,Glowing Red Ring*P:
+98,Gnitgnoff
+367,Gold Gargoyle Goblet
+159,Gold Nugget
+488,Gold Python Mail
+269,Gold Ring 
+393,Gold Ring
+486,Gold-Leaf Gauntlets
+487,Gold-Leaf Greaves
+483,Gold-Spiked Club
+497,Golden Bauble
+325,Golden Dragon Statue
+323,Golden Lion Tankard
+361,Golden Ocular Coin
+214,Grasping Scourge
+382,Great Dark Sword
+383,Great Fuvah Sword
+381,Great Light Sword
+154,Great Silver Axe
+70,Great Sword
+359,Great Tomk Necklace
+552,Green Granite
+416,Green Iron Gauntlets
+426,Green Iron Greaves
+406,Green Iron Helm
+436,Green Iron Shield
+258,Green Lotus Elixir
+112,Grumbel Amulet
+144,Guano Plasm
+480,Hairy Coconut
+57,Hammer
+474,Hammer of Doom
+5,Hand Catapult
+451,Hangman Rope
+110,Heart Squash
+338,Heavy Iron Shield
+481,High Bodden Statue
+470,Hill Crystal
+444,Holy Plate Mail
+219,Huffinpuffer Air-sac
+153,Ingot of Pigiron
+249,Iron Beak Axe
+332,Iron Dagger
+86,Iron Dart
+335,Iron Gauntlets
+448,Iron Golem Statue
+334,Iron Greaves
+333,Iron Helm
+331,Iron Knife
+75,Iron Machete
+336,Iron Shield
+90,Iron Shovel
+247,Iron Smite Pike
+251,Iron Spiked Club
+321,Iron Stein
+248,Iron Swamppus Rake
+418,Ivory Iron Gauntlets
+428,Ivory Iron Greaves
+408,Ivory Iron Helm
+438,Ivory Iron Shield
+351,Jade Snake Ring
+92,Jagged Bodkin
+485,Jaguar-Bone Knife
+167,Jagwere Skin
+148,Jeweled Scarab
+203,Jeweled Temple Sword
+28,Jute Rope
+94,Kaddawhip
+123,Keeeth Tower Shield
+395,Kelarcs Red Cleaver
+340,King's Spiked Gloves
+349,King's Spiked Helmet
+350,King's Spiked Leggings
+339,King's Spiked Shield
+477,King's Sword
+7,Knife
+238,Knolltir Loincloth
+106,Koala Tooth
+151,Kongo Bow
+399,Kudo Bone
+366,Kwando Guilder Coin
+200,Lantern
+27,Large Clam Shell
+337,Large Iron Shield
+175,Large Key
+398,Large Lockpick
+47,Leather Armour
+221,Leech Dart
+317,Light Sword
+63,Lime
+64,Lime Elixir
+124,Loadstone Amulet
+384,Locked Large Box
+114,Logbat
+236,Loggerhead Shoe
+80,Long Sword
+253,Luxury Food
+224,Mangy Beast Skull
+369,Mantle of the Dark
+275,Marble Mallet
+122,Military Pick
+121,Mining Pick
+199,Moon Light
+445,Mud Golem Statue
+145,Mud Pie
+142,Mudge Wax
+215,Nitroegg
+484,Obsidian Axe
+30,Ocular Coin
+22,Oil
+461,Oil of Ugli
+143,Oozelet
+394,Opened Large Box
+268,Orb of Seeing
+252,Parachute
+178,PigIron Gauntlets
+179,PigIron Greaves
+182,PigIron Helm
+185,PigIron Mail
+195,PigIron Shield
+473,Pike of Doom
+259,Pink Lotus Elixir
+53,Porququill
+115,Puffer Wings
+20,Purple Lotus Elixir
+16,Purple Lotus Leaf
+118,Purpumpkin
+176,Pus Pouch
+375,Quartzlight Gem
+50,Rattler Dart
+356,Red Bauble
+551,Red Granite
+420,Red Iron Gauntlets
+430,Red Iron Greaves
+410,Red Iron Helm
+440,Red Iron Shield
+56,Reptron Salve
+234,Retch Gland
+462,Retching Poison
+556,Ring of the Dead
+174,Rock Hammer
+162,Rock Mushroom
+457,Rollypod Greaves
+222,Rollypod Plate
+273,Rune Stone
+278,Sable Smoke Bottle
+496,Sacrificial Bauble
+79,Sacrificial Blade
+494,Sacrificial Club
+272,Scarab of Protection
+261,Scarab of Strength
+54,Scatamunga Horn
+197,Scorpion Fork
+141,Scorpoison
+476,Scourge of Doom
+318,Shadow Sword
+243,Shingle Club
+62,Shingle Poison
+95,Short Sword
+213,Shotgun Serpent Skin
+307,Silver Amulet*P:
+352,Silver Bauble
+163,Silver Bead
+246,Silver Beak Axe
+360,Silver Bone Necklace
+308,Silver Charm*P:
+324,Silver Dragon Statue
+482,Silver Eagle Charm
+489,Silver Gator Greaves
+304,Silver Gauntlets
+447,Silver Golem Statue
+305,Silver Greaves
+303,Silver Helm
+302,Silver Jagged Dagger
+301,Silver Knife
+126,Silver Knuckles
+281,Silver Lotus Elixir
+306,Silver Ring*P:
+244,Silver Smite Pike
+245,Silver Swamppus Rake
+204,Silver Temple Sword
+378,Silver-plated Armour
+309,Silver-studded Club
+88,Silver-tipped Dart
+310,Silver-tipped Spear
+463,Skin So Slick
+113,Skull Amulet
+226,Skull Mace
+46,Sling
+353,Slink Bauble
+125,Small Key
+397,Small Lockpick*B:
+36,Small Round Rock
+68,Smite Pike
+103,Snake Trap
+208,Snapper Skin
+469,Snapper Whip
+104,Snout Sausages
+23,Somanda Dust*P:
+277,Sorrel Smoke Bottle
+170,Sourpuss Ear
+83,Sourpuss Perfume
+41,Spare Rope
+260,Spark Lotus Elixir
+82,Spark Oil Bomb
+74,Spark Sprig
+232,Spider Net
+152,Spider Spring
+45,Spiked Club
+24,Spyglass
+10,Squzskin
+9,Squzskin Gauntlets
+48,Squzskin Greaves
+49,Squzskin Helmet
+194,Stag Eyes*P:
+150,Stemtoad Gland
+129,Stench Gland
+459,Stink Bomb
+282,Stinky Lotus Elixir
+446,Stone Golem Statue
+396,Sunka Death Mask
+52,Swamppus Paw
+51,Swamppus Rake
+37,Swarth Net
+187,Swine Fat
+250,Swinging Ball
+400,Tablet of Knowledge
+205,Tainted Temple Sword
+136,Tar Pouch
+229,Tar Sac
+211,Tentaculus Tentacle
+254,The Defender
+149,Thermadon Rex Wings
+85,Thermaway Elixir
+130,Tholomite Heart
+58,Throwing Spear
+60,Throwing Star
+210,Tigerskin Rug
+198,Toad Leather
+358,Tomk Necklace
+55,Tooth Sabre
+33,Torch
+44,Tortoise Shield
+548,Training Rod
+96,Travel Grub
+81,Trident
+379,Trolgrim
+191,Troll Hammer
+186,Troll Knife
+190,Troll Pike
+173,Troll Token
+109,Turgid Toadstool
+180,Tusker Tusk
+26,Tuvian Shovel
+116,Umber Grass
+372,Unreadable Scroll
+21,Voodoo Cauldron
+298,Voodoo Serpent Potion
+227,Walraphant Tusk
+220,Wanna Bee Stinger
+42,Waterskin
+105,Waxed Ooze
+274,Weapons Satchel
+357,White Bauble
+554,White Granite
+19,White Lotus Elixir
+14,White Lotus Leaf
+78,Wicked Scimitar
+255,Wine
+330,Wooden Bodden Statue
+328,Wooden Dragon Statue
+322,Wooden Fuvah Statue
+316,Wooden Kabuki Statue
+386,Wooden Kelarc Statue
+320,Wooden Shroud Statue
+240,Wooden Slug
+209,Worm Dart
+230,Worm Plate
+456,Worm-plate Helm
+225,Xanxu Bear Carcass
+466,Xanxu Construct
+158,Xanxu Leg Joint
+160,Xanxu Snake Head
+196,Xanxu Webbed Feet
+355,Yellow Bauble
+553,Yellow Granite
+35,Yellow Lotus Elixir
+15,Yellow Lotus Leaf
+31,Yogorilla Lens
+2,Zinki Dart
+365,Zoingo Copper Coin
+363,Zoingo Gold Coin
+128,Zoingo Jewel Box
+140,Zoingo Jeweled Flute
+371,Zoingo Ruby Dagger
+364,Zoingo Silver Coin
+67,Zombie Juice

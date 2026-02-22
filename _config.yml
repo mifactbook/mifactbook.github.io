@@ -1,0 +1,14 @@
+title: Monster Island Fact Book
+baseurl: ""
+exclude:
+  - monsterisland.bbprojectd
+  - monsterisland.code-workspace
+  - "*.db"
+  - "*.txt"
+  - Blurbs/unused/
+  - Items/unused/
+  - Fort/unused/
+  - Locations/unused
+  - img
+  - "*.png"
+  - unused

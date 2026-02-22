@@ -1,0 +1,91 @@
+---
+---
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Far Forges</title>
+	<link rel="stylesheet" href="../scripts/css/gruvbox-theme.css">
+	<link rel="stylesheet" href="../scripts/css/Fort.css">
+	<link rel="stylesheet" href="../scripts/css/blurbs-grid.css">
+
+	<style>
+		.fort-nav-grid {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: 10px;
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+
+<body>
+
+{% include nav.html %}
+
+<div id="fortNavContainer" class="fort-nav-grid">
+	<div class="blurb-item"><a href="../Fort/FarExoticas.html">Far Exoticas</a></div>
+	<div class="blurb-item active">Far Forges</div>
+	<div class="blurb-item"><a href="../Fort/FarInns.html">Far Inns</a></div>
+	<div class="blurb-item"><a href="../Fort/FarPosts.html">Far Posts</a></div>
+	<div class="blurb-item"><a href="../Fort/FarBanks.html">Jossman Imperial Banks</a></div>
+	<div class="blurb-item"><a href="../Fort/RailwayStations.html">Railway Stations</a></div>
+	<div class="blurb-item"><a href="../Fort/Towers.html">Towers</a></div>
+	<div class="blurb-item"><a href="../Fort/TrollShoppes.html">Troll Shoppes</a></div>
+</div>
+
+<div class="table-header">
+	<div class="sortable" data-sort="coordinates">Coordinates</div>
+	<div class="sortable" data-sort="name">Name</div>
+</div>
+
+<div id="locationsContainer">
+	<div class="location-row">
+		<div class="coordinates">(71, 267)</div>
+		<div class="name"><a href="../Far/Bellows.html">Bellows (108)</a></div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-116, 176)</div>
+		<div class="name"><a href="../Far/Borsthead.html">Borsteads (998)</a></div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-166, 174)</div>
+		<div class="name"><a href="../Far/DarkAnvil.html">Dark Anvil (692)</a></div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-165, 268)</div>
+		<div class="name"><a href="../Far/FlaringFurnace.html">Flaring Furnace (318)</a></div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-7, 270)</div>
+		<div class="name"><a href="../Far/IronPliars.html">Iron Pliars (538)</a></div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(84, 180)</div>
+		<div class="name"><a href="../Far/KornHammer.html">Korn Hammer (557)</a></div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(32, 178)</div>
+		<div class="name"><a href="../Far/PolishedRod.html">Polished Rod (410)</a></div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-89, 270)</div>
+		<div class="name"><a href="../Far/QuenchingDip.html">Quenching Dip (581)</a></div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-70, 186)</div>
+		<div class="name"><a href="../Far/SilverHook.html">Silver Hook (607)</a></div>
+	</div>
+	<div class="location-row">
+		<div class="coordinates">(-17, 186)</div>
+		<div class="name"><a href="../Far/SpigotsRed.html">Spigot Red (27)</a></div>
+	</div>
+</div>
+
+<script src="../scripts/js/Fort.js" type="text/javascript"></script>
+
+</body>
+</html>

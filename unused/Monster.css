@@ -1,0 +1,175 @@
+body  {
+	background-color : white;
+	font-family : "Monospace Xenon NF";
+	font-size: 16px;
+}
+
+/* Links */
+a {
+	color : #990066;
+	background-color : inherit;
+	text-decoration : none;
+	font-weight : bold;
+}
+
+.blurbs {
+	width: 50em;
+	text-align: justify;
+}
+a:visited  {
+	color : #990066;
+	background-color : inherit;
+	text-decoration : none;
+	font-weight : bold;
+}
+
+blockquote {
+	font-style: italic;
+	color: #990066;
+}
+
+/* Tables */
+table  {
+	border-style : dashed;
+	border-color : #990066;
+	border-width : 1px;
+}
+table.blurbs  {
+	width: 50em;
+}
+
+th {
+	color : inherit;
+	background-color : #cbcbcb;
+	font-weight : bold;
+	text-align : center;
+	padding-left : 3pt;
+	padding-top : 1pt;
+	padding-bottom : 1pt;
+	padding-right : 3pt;
+}
+
+td  {
+	color : inherit;
+	background-color : #e0e0e0;
+	text-align : left;
+	vertical-align : top;
+	padding-left : 3pt;
+	padding-top : 1pt;
+	padding-bottom : 1pt;
+	padding-right : 3pt;
+}
+
+.nowrap {
+	white-space:nowrap;
+}
+
+
+th.head  {
+	background-color : #cbcbcb;
+	color : inherit;
+	font-family : Headhunter, Tahoma, serif;
+	font-size : large;
+}
+
+th.index  {
+	background-color : Silver;
+	color : inherit;
+	text-align : left;
+	width : 33%;
+}
+
+td.right  {
+	color : inherit;
+	background-color : Silver;
+	text-align : right;
+}
+
+img.end  {
+	margin-right : 5pt;
+	float : left;
+	border-style : none;
+}
+
+img  {
+	border-style : none;
+}
+
+img.left  {
+	margin-right : 3pt;
+	vertical-align: middle;
+	float: left;
+	clear: left;
+}
+
+img.big  {
+	margin-right : 5pt;
+	float : left;
+	border-style : none;
+	width : 80pt;
+	height : 80pt;
+}
+
+td.link {
+	vertical-align: middle;
+}
+
+p.odd {
+	background-color: #e0e0e0;
+	padding: 5px;
+}
+
+p.odd b, p.even b {
+	font-size: larger;
+	color: #990066;
+}
+
+p.even {
+	background-color: #c0c0c0;
+	padding: 5px;
+}
+
+div.buy  {
+	color : green;
+}
+
+div.sell  {
+	color : red;
+}
+
+div.repair  {
+	color : yellow;
+}
+
+div.bounty  {
+	color : blue;
+}
+
+div.textright  {
+	text-align : right;
+}
+
+dt  {
+	font-weight : bold;
+}
+
+div.newsright  {
+	margin-left : 200px;
+	min-width : 200px;
+}
+
+div.heading {
+	color : inherit;
+	background-color : #B8C9BA;
+	font-weight : bold;
+	text-align : center;
+	padding-left : 3pt;
+	padding-top : 1pt;
+	padding-bottom : 1pt;
+	margin-top : 3pt;
+	margin-bottom : 3pt;
+}
+
+h1, h3 {
+	font-family: "Avenir Next LT Pro";
+}
