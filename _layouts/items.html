@@ -16,7 +16,7 @@
 {% include nav.html %}
 
 <header>
-	<h1>{{ page.item_name }} ({{ page.item_id }})</h1>
+	<h1>{{ page.item_name }} {% if page.item_id %}({{ page.item_id }}){% endif %}</h1>
 </header>
 
 <div class="info-section">
