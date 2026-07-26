@@ -7,8 +7,8 @@
 }
 
 .info-section h2 {
+	font-family: 'Fossil';
 	color: var(--yellow);
-	font-family: "Iosevka Etoile Web";
 	font-size: 1.5em;
 	margin-bottom: 10px;
 	border-bottom: 2px solid var(--bg1);
