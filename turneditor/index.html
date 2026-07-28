@@ -18,13 +18,16 @@
 	</header>
 	<div class="app-body">
 	<div class="main-content">
-		<form action="https://www.kjcgames.com/cgi/form.pl" method="POST" id="turncard-form">
+		<form action="/" method="get" id="turncard-form"><!-- https://www.kjcgames.com/cgi/form.pl -->
 			<input type="hidden" name="return_link_url" value="https://mifactbook.github.io/turneditor/index.html">
 			<input type="hidden" name="return_link_title" value="Back to the Monster Island Turn Editor">
 			<input type="hidden" name="recipient" value="orders@kjcgames.co.uk">
 			<input type="hidden" name="subject" value="New Monster Island Turn Form">
 			<input type="hidden" name="required" value="realname,Monster_Number,Account_Number,1st_Order">
 			<input type="hidden" name="print_config" value="email,realname">
+			<input type="hidden" name="MI_TURN_SC3">
+			<input type="hidden" name="MI_TURN_SC4">>
+			<input type="hidden" name="submit" value="submit">
 
 			<div class="section" id="section-info">
 				<div class="section-header" onclick="toggleSection('info')">
@@ -264,7 +267,6 @@
 				<div class="tree-item indent-1" data-code="M" data-order-name="Make Item" onclick="selectSidebarOrder(this, 'M')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Make Item (M)</span></div>
 				<div class="tree-item indent-1" data-code="NF" data-order-name="Nasty Fart" onclick="selectSidebarOrder(this, 'NF')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Nasty Fart (NF)</span></div>
 				<div class="tree-item indent-1" data-code="Q" data-order-name="Quest for Knowledge" onclick="selectSidebarOrder(this, 'Q')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Quest for Knowledge (Q)</span></div>
-				<div class="tree-item indent-1" data-code="X" data-order-name="Transfer Item" onclick="selectSidebarOrder(this, 'X')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Transfer Item (X)</span></div>
 				<div class="tree-item indent-1" data-code="TP" data-order-name="Trap Pit" onclick="selectSidebarOrder(this, 'TP')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Trap Pit (TP)</span></div>
 				<div class="tree-item indent-1" data-code="U" data-order-name="Use/Consume Item" onclick="selectSidebarOrder(this, 'U')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Use/Consume Item (U)</span></div>
 				<div class="tree-item indent-1" data-code="Y" data-order-name="Yell Loudly" onclick="selectSidebarOrder(this, 'Y')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Yell Loudly (Y)</span></div>
@@ -324,6 +326,7 @@
 				<div class="tree-item indent-1" data-code="PR" data-order-name="Permanently Rid" onclick="selectSidebarOrder(this, 'PR')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Permanently Rid (PR)</span></div>
 				<div class="tree-item indent-1" data-code="P" data-order-name="Place in Store Room" onclick="selectSidebarOrder(this, 'P')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Place in Store Room (P)</span></div>
 				<div class="tree-item indent-1" data-code="R" data-order-name="Rid" onclick="selectSidebarOrder(this, 'R')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Rid (R)</span></div>
+				<div class="tree-item indent-1" data-code="X" data-order-name="Transfer Item" onclick="selectSidebarOrder(this, 'X')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Transfer Item (X)</span></div>
 				<div class="tree-item indent-1" data-code="WR" data-order-name="Weekly Rid" onclick="selectSidebarOrder(this, 'WR')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Weekly Rid (WR)</span></div>
 			</div>
 
