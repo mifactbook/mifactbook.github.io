@@ -18,7 +18,7 @@
 	</header>
 	<div class="app-body">
 	<div class="main-content">
-		<form action="/" method="get" id="turncard-form"><!-- https://www.kjcgames.com/cgi/form.pl -->
+		<form action="https://www.kjcgames.com/cgi/form.pl" method="POST" id="turncard-form">
 			<input type="hidden" name="return_link_url" value="https://mifactbook.github.io/turneditor/index.html">
 			<input type="hidden" name="return_link_title" value="Back to the Monster Island Turn Editor">
 			<input type="hidden" name="recipient" value="orders@kjcgames.co.uk">
@@ -26,8 +26,7 @@
 			<input type="hidden" name="required" value="realname,Monster_Number,Account_Number,1st_Order">
 			<input type="hidden" name="print_config" value="email,realname">
 			<input type="hidden" name="MI_TURN_SC3">
-			<input type="hidden" name="MI_TURN_SC4">>
-			<input type="hidden" name="submit" value="submit">
+			<input type="hidden" name="MI_TURN_SC4">
 
 			<div class="section" id="section-info">
 				<div class="section-header" onclick="toggleSection('info')">
@@ -63,12 +62,12 @@
 			</div>
 
 			<div class="section" id="section-return">
-				<div class="section-header" onclick="toggleSection('return')">
+				<div class="section-header collapsed" onclick="toggleSection('return')">
 					<span class="section-collapse-icon">▼</span>
 					<span class="section-title">Special Codes</span>
 				</div>
 
-				<div class="section-body" id="body-return">
+				<div class="section-body collapsed" id="body-return">
 					<div class="form-row form-row-inline">
 						<div class="form-field-small">
 							<select name="MI_TURN_SC1">
@@ -185,7 +184,7 @@
 				<div class="tree-item indent-1" data-code="FM" data-order-name="Find Mount" onclick="selectSidebarOrder(this, 'FM')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Find Mount (FM)</span></div>
 				<div class="tree-item indent-1" data-code="KC" data-order-name="Kill Capture" onclick="selectSidebarOrder(this, 'KC')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Kill Capture (KC)</span></div>
 				<div class="tree-item indent-1" data-code="RC" data-order-name="Release Creature" onclick="selectSidebarOrder(this, 'RC')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Release Creature (RC)</span></div>
-				<div class="tree-item indent-1" data-code="TW" data-order-name="Train/Work Mount" onclick="selectSidebarOrder(this, 'TW')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Train/Work Mount (TW)</span></div>
+				<div class="tree-item indent-1" data-code="TW" data-order-name="Riding" onclick="selectSidebarOrder(this, 'TW')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Train/Work Mount (TW)</span></div>
 			</div>
 
 			<div class="tree-item" onclick="toggleTree(this)">
@@ -195,8 +194,9 @@
 
 			<div class="tree-children">
 				<div class="tree-item indent-1" data-code="B" data-order-name="Battle Cry" onclick="selectSidebarOrder(this, 'B')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Battle Cry (B)</span></div>
-				<div class="tree-item indent-1" data-code="C" data-order-name="Cast Spell" onclick="selectSidebarOrder(this, 'C')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Cast Spell (C)</span></div>
-				<div class="tree-item indent-1" data-code="F" data-order-name="Friendliness/Riskiness" onclick="selectSidebarOrder(this, 'F')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Friendliness/Riskiness (F)</span></div>
+				<div class="tree-item indent-1" data-code="C" data-order-name="C1" onclick="selectSidebarOrder(this, 'C')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Cast Spell [#] (C)</span></div>
+				<div class="tree-item indent-1" data-code="C" data-order-name="C2" onclick="selectSidebarOrder(this, 'C')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Cast Spell [#][AP/M#/I#] (C)</span></div>
+				<div class="tree-item indent-1" data-code="F" data-order-name="Risk" onclick="selectSidebarOrder(this, 'F')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Friendliness/Riskiness (F)</span></div>
 				<div class="tree-item indent-1" data-code="N" data-order-name="No Attack" onclick="selectSidebarOrder(this, 'N')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">No Attack (N)</span></div>
 				<div class="tree-item indent-1" data-code="W" data-order-name="Weapon Practice" onclick="selectSidebarOrder(this, 'W')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Weapon Practice (W)</span></div>
 				<div class="tree-item indent-1" data-code="W" data-order-name="Wrestle Friend" onclick="selectSidebarOrder(this, 'WF')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Wrestle Friend (WF)</span></div>
@@ -209,13 +209,13 @@
 
 			<div class="tree-children">
 				<div class="tree-item indent-1" data-code="AS" data-order-name="Automatic Sell" onclick="selectSidebarOrder(this, 'AS')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Automatic Sell (AS)</span></div>
-				<div class="tree-item indent-1" data-code="B" data-order-name="Buy From Far Post" onclick="selectSidebarOrder(this, 'B')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Buy From Far Post (B)</span></div>
+				<div class="tree-item indent-1" data-code="B" data-order-name="Buy" onclick="selectSidebarOrder(this, 'B')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Buy From Far Post [I#][#] (B)</span></div>
 				<div class="tree-item indent-1" data-code="CB" data-order-name="Collect Bounty" onclick="selectSidebarOrder(this, 'CB')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Collect Bounty (CB)</span></div>
 				<div class="tree-item indent-1" data-code="PT" data-order-name="Pay Troll" onclick="selectSidebarOrder(this, 'PT')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Pay Troll (PT)</span></div>
-				<div class="tree-item indent-1" data-code="P" data-order-name="Purchase From Far Inn/Forge" onclick="selectSidebarOrder(this, 'P')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Purchase From Far Inn/Forge (P)</span></div>
-				<div class="tree-item indent-1" data-code="P" data-order-name="Purchase Ticket From Station" onclick="selectSidebarOrder(this, 'P')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Purchase Ticket From Station (P)</span></div>
-				<div class="tree-item indent-1" data-code="R" data-order-name="Repair Item at Forge" onclick="selectSidebarOrder(this, 'R')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Repair Item at Forge (R)</span></div>
-				<div class="tree-item indent-1" data-code="P" data-order-name="Sell Item" onclick="selectSidebarOrder(this, 'P')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Sell Item (P)</span></div>
+				<div class="tree-item indent-1" data-code="P" data-order-name="Purchase" onclick="selectSidebarOrder(this, 'P')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Purchase Items [I#][#] (P)</span></div>
+				<div class="tree-item indent-1" data-code="P" data-order-name="Ticket" onclick="selectSidebarOrder(this, 'P')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Purchase Railway Ticket [#] (P)</span></div>
+				<div class="tree-item indent-1" data-code="R" data-order-name="Repair" onclick="selectSidebarOrder(this, 'R')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Repair Item (R)</span></div>
+				<div class="tree-item indent-1" data-code="P" data-order-name="Sell" onclick="selectSidebarOrder(this, 'P')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Sell Items [I#][#] (P)</span></div>
 			</div>
 
 			<div class="tree-item" onclick="toggleTree(this)">
@@ -225,7 +225,7 @@
 
 			<div class="tree-children">
 				<div class="tree-item indent-1" data-code="CW" data-order-name="Call Wizard" onclick="selectSidebarOrder(this, 'CW')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Call Wizard (CW)</span></div>
-				<div class="tree-item indent-1" data-code="CS" data-order-name="Ceremony of Santification" onclick="selectSidebarOrder(this, 'CS')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Ceremony of Santification (CS)</span></div>
+				<div class="tree-item indent-1" data-code="CS" data-order-name="Sanctify" onclick="selectSidebarOrder(this, 'CS')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Ceremony of Santification (CS)</span></div>
 				<div class="tree-item indent-1" data-code="Z" data-order-name="Rebuild Ruins" onclick="selectSidebarOrder(this, 'Z')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Rebuild Ruins (Z)</span></div>
 				<div class="tree-item indent-1" data-code="U" data-order-name="Use Xanxu Construct" onclick="selectSidebarOrder(this, 'U')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Use Xanxu Construct (U 466)</span></div>
 			</div>
@@ -251,25 +251,6 @@
 				<div class="tree-item indent-1" data-code="EF" data-order-name="Enhance Fort" onclick="selectSidebarOrder(this, 'EF')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Enhance Fort (EF)</span></div>
 				<div class="tree-item indent-1" data-code="FS" data-order-name="Fort Stay" onclick="selectSidebarOrder(this, 'FS')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Fort Stay (FS)</span></div>
 				<div class="tree-item indent-1" data-code="GF" data-order-name="Guard Fort" onclick="selectSidebarOrder(this, 'GF')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Guard Fort (GF)</span></div>
-			</div>
-
-			<div class="tree-item" onclick="toggleTree(this)">
-				<span class="tree-arrow">&#9654;</span>
-				<span class="tree-label">General</span>
-			</div>
-
-			<div class="tree-children">
-				<div class="tree-item indent-1" data-code="BP" data-order-name="Bathe in Pond" onclick="selectSidebarOrder(this, 'BP')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Bathe in Pond (BP)</span></div>
-				<div class="tree-item indent-1" data-code="D" data-order-name="Dig" onclick="selectSidebarOrder(this, 'D')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Dig (D)</span></div>
-				<div class="tree-item indent-1" data-code="J" data-order-name="Jazzercize Aerobics" onclick="selectSidebarOrder(this, 'J')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Jazzercize Aerobics (J)</span></div>
-				<div class="tree-item indent-1" data-code="LB" data-order-name="Leverage Boulder" onclick="selectSidebarOrder(this, 'LB')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Leverage Boulder (LB)</span></div>
-				<div class="tree-item indent-1" data-code="LV" data-order-name="Loot 'n' Vandalize" onclick="selectSidebarOrder(this, 'LV')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Loot 'n' Vandalize (LV)</span></div>
-				<div class="tree-item indent-1" data-code="M" data-order-name="Make Item" onclick="selectSidebarOrder(this, 'M')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Make Item (M)</span></div>
-				<div class="tree-item indent-1" data-code="NF" data-order-name="Nasty Fart" onclick="selectSidebarOrder(this, 'NF')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Nasty Fart (NF)</span></div>
-				<div class="tree-item indent-1" data-code="Q" data-order-name="Quest for Knowledge" onclick="selectSidebarOrder(this, 'Q')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Quest for Knowledge (Q)</span></div>
-				<div class="tree-item indent-1" data-code="TP" data-order-name="Trap Pit" onclick="selectSidebarOrder(this, 'TP')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Trap Pit (TP)</span></div>
-				<div class="tree-item indent-1" data-code="U" data-order-name="Use/Consume Item" onclick="selectSidebarOrder(this, 'U')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Use/Consume Item (U)</span></div>
-				<div class="tree-item indent-1" data-code="Y" data-order-name="Yell Loudly" onclick="selectSidebarOrder(this, 'Y')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Yell Loudly (Y)</span></div>
 			</div>
 
 			<div class="tree-item" onclick="toggleTree(this)">
@@ -339,22 +320,20 @@
 				<div class="tree-item indent-1" data-code="X" data-order-name="Inn Knowledge" onclick="selectSidebarOrder(this, 'X')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Inn Knowledge (X)</span></div>
 				<div class="tree-item indent-1" data-code="I" data-order-name="Inn Stay" onclick="selectSidebarOrder(this, 'I')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Inn Stay (I)</span></div>
 				<div class="tree-item indent-1" data-code="W" data-order-name="Inn Weapon Training" onclick="selectSidebarOrder(this, 'W')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Inn Weapon Training (W)</span></div>
-				<div class="tree-item indent-1" data-code="V" data-order-name="Voodoo Instruction" onclick="selectSidebarOrder(this, 'V')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Voodoo Instruction (V)</span></div>
-				<div class="tree-item indent-1" data-code="VM" data-order-name="Voodoo Master" onclick="selectSidebarOrder(this, 'VM')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Voodoo Master (VM)</span></div>
+				<div class="tree-item indent-1" data-code="V" data-order-name="Voodoo Instruction" onclick="selectSidebarOrder(this, 'V')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Inn Voodoo Instruction (V)</span></div>
 			</div>
 
 			<div class="tree-item" onclick="toggleTree(this)">
 				<span class="tree-arrow">&#9654;</span>
-				<span class="tree-label">Miscellaneous</span>
+				<span class="tree-label">Mischief</span>
 			</div>
 
 			<div class="tree-children">
-				<div class="tree-item indent-1" data-code="AC" data-order-name="Ancestral Ceremony" onclick="selectSidebarOrder(this, 'AC')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Ancestral Ceremony (AC)</span></div>
-				<div class="tree-item indent-1" data-code="DI" data-order-name="Diet" onclick="selectSidebarOrder(this, 'DI')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Diet (DI)</span></div>
-				<div class="tree-item indent-1" data-code="GX" data-order-name="Gather Items for AC" onclick="selectSidebarOrder(this, 'GX')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Gather Items for AC (GX)</span></div>
-				<div class="tree-item indent-1" data-code="HP" data-order-name="Gather Hairy Coconuts" onclick="selectSidebarOrder(this, 'HP')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Gather Hairy Coconuts (HP)</span></div>
-				<div class="tree-item indent-1" data-code="IZ" data-order-name="Inform Zoingot" onclick="selectSidebarOrder(this, 'IZ')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Inform Zoingot (IZ)</span></div>
-				<div class="tree-item indent-1" data-code="XC" data-order-name="Xanxu Construct" onclick="selectSidebarOrder(this, 'XC')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Learn the Xanxu Construct (XC)</span></div>
+				<div class="tree-item indent-1" data-code="D" data-order-name="Dig" onclick="selectSidebarOrder(this, 'D')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Dig (D)</span></div>
+				<div class="tree-item indent-1" data-code="LB" data-order-name="Leverage Boulder" onclick="selectSidebarOrder(this, 'LB')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Leverage Boulder (LB)</span></div>
+				<div class="tree-item indent-1" data-code="LV" data-order-name="Loot" onclick="selectSidebarOrder(this, 'LV')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Loot 'n' Vandalize (LV)</span></div>
+				<div class="tree-item indent-1" data-code="TP" data-order-name="Trap Pit" onclick="selectSidebarOrder(this, 'TP')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Trap Pit (TP)</span></div>
+				<div class="tree-item indent-1" data-code="Y" data-order-name="Yell" onclick="selectSidebarOrder(this, 'Y')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Yell (Y)</span></div>
 			</div>
 
 			<div class="tree-item" onclick="toggleTree(this)">
@@ -364,15 +343,15 @@
 
 			<div class="tree-children">
 				<div class="tree-item indent-1" data-code="XR" data-order-name="Cross Railway Bridge" onclick="selectSidebarOrder(this, 'XR')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Cross Railway Bridge (XR)</span></div>
-				<div class="tree-item indent-1" data-code="EH" data-order-name="Enter Hidey-Hole" onclick="selectSidebarOrder(this, 'EH')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Enter Hidey-Hole (EH)</span></div>
+				<div class="tree-item indent-1" data-code="EH" data-order-name="Hide" onclick="selectSidebarOrder(this, 'EH')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Enter Hidey-Hole (EH)</span></div>
 				<div class="tree-item indent-1" data-code="HJ" data-order-name="High Jungle Entry" onclick="selectSidebarOrder(this, 'HJ')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">High Jungle Entry (HJ)</span></div>
-				<div class="tree-item indent-1" data-code="H" data-order-name="Hunt Along Trail/Path" onclick="selectSidebarOrder(this, 'H')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Hunt Along Trail/Path (H)</span></div>
-				<div class="tree-item indent-1" data-code="H" data-order-name="Hunt and Forage" onclick="selectSidebarOrder(this, 'H')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Hunt and Forage (H)</span></div>
-				<div class="tree-item indent-1" data-code="A" data-order-name="Track: Attack" onclick="selectSidebarOrder(this, 'A')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Track: Attack (A)</span></div>
-				<div class="tree-item indent-1" data-code="L" data-order-name="Track: Locate" onclick="selectSidebarOrder(this, 'L')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Track: Locate (L)</span></div>
-				<div class="tree-item indent-1" data-code="S" data-order-name="Track: Snatch" onclick="selectSidebarOrder(this, 'S')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Track: Snatch (S)</span></div>
+				<div class="tree-item indent-1" data-code="H" data-order-name="Hunt Path" onclick="selectSidebarOrder(this, 'H')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Hunt Along Trail/Path (H)</span></div>
+				<div class="tree-item indent-1" data-code="H" data-order-name="Hunt" onclick="selectSidebarOrder(this, 'H')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Hunt and Forage (H)</span></div>
+				<div class="tree-item indent-1" data-code="A" data-order-name="Attack" onclick="selectSidebarOrder(this, 'A')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Track: Attack (A)</span></div>
+				<div class="tree-item indent-1" data-code="L" data-order-name="Locate" onclick="selectSidebarOrder(this, 'L')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Track: Locate (L)</span></div>
+				<div class="tree-item indent-1" data-code="S" data-order-name="Snatch" onclick="selectSidebarOrder(this, 'S')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Track: Snatch (S)</span></div>
 				<div class="tree-item indent-1" data-code="T" data-order-name="Travel" onclick="selectSidebarOrder(this, 'T')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Travel (T)</span></div>
-				<div class="tree-item indent-1" data-code="T" data-order-name="Travel Along Trail/Path" onclick="selectSidebarOrder(this, 'T')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Travel Along Trail/Path (T)</span></div>
+				<div class="tree-item indent-1" data-code="T" data-order-name="Travel Path" onclick="selectSidebarOrder(this, 'T')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Travel Along Trail/Path (T)</span></div>
 			</div>
 
 			<div class="tree-item" onclick="toggleTree(this)">
@@ -388,6 +367,52 @@
 
 			<div class="tree-item" onclick="toggleTree(this)">
 				<span class="tree-arrow">&#9654;</span>
+				<span class="tree-label">Pedagogy</span>
+			</div>
+
+			<div class="tree-children">
+				<div class="tree-item indent-1" data-code="XC" data-order-name="Xanxu Construct" onclick="selectSidebarOrder(this, 'XC')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Learn the Xanxu Construct (XC)</span></div>
+				<div class="tree-item indent-1" data-code="Q" data-order-name="Quest" onclick="selectSidebarOrder(this, 'Q')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Quest for Knowledge (Q)</span></div>
+				<div class="tree-item indent-1" data-code="TV" data-order-name="Troll Voodoo" onclick="selectSidebarOrder(this, 'TV')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Troll Voodoo (TV)</span></div>
+				<div class="tree-item indent-1" data-code="VM" data-order-name="Voodoo Master" onclick="selectSidebarOrder(this, 'VM')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Voodoo Master (VM)</span></div>
+			</div>
+
+			<div class="tree-item" onclick="toggleTree(this)">
+				<span class="tree-arrow">&#9654;</span>
+				<span class="tree-label">Self-Care</span>
+			</div>
+
+			<div class="tree-children">
+				<div class="tree-item indent-1" data-code="BP" data-order-name="Bathe" onclick="selectSidebarOrder(this, 'BP')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Bathe in Pond (BP)</span></div>
+				<div class="tree-item indent-1" data-code="DI" data-order-name="Diet" onclick="selectSidebarOrder(this, 'DI')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Diet (DI)</span></div>
+				<div class="tree-item indent-1" data-code="J" data-order-name="Jazzercize" onclick="selectSidebarOrder(this, 'J')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Jazzercize (J)</span></div>
+				<div class="tree-item indent-1" data-code="NF" data-order-name="Nasty Fart" onclick="selectSidebarOrder(this, 'NF')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Nasty Fart (NF)</span></div>
+			</div>
+
+			<div class="tree-item" onclick="toggleTree(this)">
+				<span class="tree-arrow">&#9654;</span>
+				<span class="tree-label">Side Quests</span>
+			</div>
+
+			<div class="tree-children">
+				<div class="tree-item indent-1" data-code="AC" data-order-name="Ancestral Ceremony" onclick="selectSidebarOrder(this, 'AC')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Ancestral Ceremony (AC)</span></div>
+				<div class="tree-item indent-1" data-code="GX" data-order-name="Gather Items for AC" onclick="selectSidebarOrder(this, 'GX')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Gather Items for AC (GX)</span></div>
+				<div class="tree-item indent-1" data-code="HP" data-order-name="Gather Hairy Coconuts" onclick="selectSidebarOrder(this, 'HP')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Gather Hairy Coconuts (HP)</span></div>
+				<div class="tree-item indent-1" data-code="IZ" data-order-name="Inform Zoingot" onclick="selectSidebarOrder(this, 'IZ')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Inform Zoingot (IZ)</span></div>
+			</div>
+
+			<div class="tree-item" onclick="toggleTree(this)">
+				<span class="tree-arrow">&#9654;</span>
+				<span class="tree-label">Tooling</span>
+			</div>
+
+			<div class="tree-children">
+				<div class="tree-item indent-1" data-code="M" data-order-name="Make" onclick="selectSidebarOrder(this, 'M')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Make Item (M)</span></div>
+				<div class="tree-item indent-1" data-code="U" data-order-name="Use" onclick="selectSidebarOrder(this, 'U')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Use/Consume Item (U)</span></div>
+			</div>
+
+			<div class="tree-item" onclick="toggleTree(this)">
+				<span class="tree-arrow">&#9654;</span>
 				<span class="tree-label">Tower Services</span>
 			</div>
 
@@ -396,9 +421,8 @@
 				<div class="tree-item indent-1" data-code="AM" data-order-name="Tower Admit Monster" onclick="selectSidebarOrder(this, 'AM')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Tower Admit Monster (AM)</span></div>
 				<div class="tree-item indent-1" data-code="TK" data-order-name="Tower Skill Training" onclick="selectSidebarOrder(this, 'TK')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Tower Skill Training (TK)</span></div>
 				<div class="tree-item indent-1" data-code="TX" data-order-name="Tower Spell Training" onclick="selectSidebarOrder(this, 'TX')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Tower Spell Training (TX)</span></div>
-				<div class="tree-item indent-1" data-code="TI" data-order-name="Tower Stay Grade 1" onclick="selectSidebarOrder(this, 'TI')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Tower Stay Grade 1 (TI)</span></div>
+				<div class="tree-item indent-1" data-code="TI" data-order-name="Tower Stay" onclick="selectSidebarOrder(this, 'TI')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Tower Stay (TI)</span></div>
 				<div class="tree-item indent-1" data-code="TT" data-order-name="Tower Teleport" onclick="selectSidebarOrder(this, 'TT')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Tower Teleport (TT)</span></div>
-				<div class="tree-item indent-1" data-code="TV" data-order-name="Troll Voodoo" onclick="selectSidebarOrder(this, 'TV')"><span class="tree-arrow spacer">&#9654;</span><span class="tree-label">Troll Voodoo (TV)</span></div>
 			</div>
 		</div>
 
@@ -429,6 +453,6 @@
 
 </body>
 
-<script src="../scripts/js/turneditor.js" type="text/javascript"></script>
+<script src="../scripts/js/turneditor/main.js" type="module"></script>
 
 </html>
